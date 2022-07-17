@@ -20,4 +20,16 @@ public class Categorie {
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
 	}
+
+	public Categorie() {
+		super();
+	}
+
+	public Categorie(Integer noCotegorie, String libelle) {
+		super();
+		this.noCotegorie = noCotegorie;
+		this.libelle = libelle;
+	}
+	
+	
 }

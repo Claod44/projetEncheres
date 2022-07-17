@@ -23,4 +23,16 @@ public class Enchere {
 	public void setMontantEnchere(Double montantEnchere) {
 		this.montantEnchere = montantEnchere;
 	}
+
+	public Enchere() {
+		super();
+	}
+
+	public Enchere(Date dateEnchere, Double montantEnchere) {
+		super();
+		this.dateEnchere = dateEnchere;
+		this.montantEnchere = montantEnchere;
+	}
+	
+	
 }

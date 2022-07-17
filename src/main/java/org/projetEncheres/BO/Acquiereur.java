@@ -18,4 +18,8 @@ public class Acquiereur extends Utilisateur {
 			enchere.setPrix(prix);
 		}
 	}
+
+	public Acquiereur() {
+		super();
+	}
 }

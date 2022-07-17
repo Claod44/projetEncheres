@@ -124,6 +124,23 @@ public class Utilisateur {
 		super();
 		this.credit = credit;
 	}
+
+	public Utilisateur(Integer credit, String nom, String prenom, Integer noUtilisateur, Utilisateur administrateur,
+			String pseudo, String email, String telephone, String rue, String codePostal, String motDePasse) {
+		super();
+		this.credit = credit;
+		Nom = nom;
+		this.prenom = prenom;
+		this.noUtilisateur = noUtilisateur;
+		this.administrateur = administrateur;
+		this.pseudo = pseudo;
+		this.email = email;
+		this.telephone = telephone;
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.motDePasse = motDePasse;
+	}
+	
 	
 	
 }

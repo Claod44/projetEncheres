@@ -109,4 +109,24 @@ public class Vente {
 		this.Fermer();
 	}
 
+	public Vente() {
+		super();
+		this.timer = new Timer();
+	}
+
+	public Vente(Article article, Double prix, Acquiereur acquiereur, List<Acquiereur> acquiereursPotentiels,
+			Boolean etat, int duree) {
+		super();
+		this.article = article;
+		this.prix = prix;
+		this.acquiereur = acquiereur;
+		this.acquiereursPotentiels = acquiereursPotentiels;
+		this.etat = etat;
+		this.duree = duree;
+		this.timer = new Timer();
+	}
+	
+	
+	
+
 }

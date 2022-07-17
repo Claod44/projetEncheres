@@ -82,4 +82,23 @@ public class Article {
 	public void setCategorieDeLarticle(Categorie categorieDeLarticle) {
 		this.categorieArticle = categorieDeLarticle;
 	}
+
+	public Article(Double miseAParix, String nomArticle, Integer noArticle, String description, Date dateDebutEncheres,
+			Date dateFinEncheres, Boolean etatVente, Categorie categorieArticle) {
+		super();
+		this.miseAParix = miseAParix;
+		this.nomArticle = nomArticle;
+		this.noArticle = noArticle;
+		this.description = description;
+		this.dateDebutEncheres = dateDebutEncheres;
+		this.dateFinEncheres = dateFinEncheres;
+		this.etatVente = etatVente;
+		this.categorieArticle = categorieArticle;
+	}
+
+	public Article() {
+		super();
+	}
+	
+	
 }

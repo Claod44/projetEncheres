@@ -12,4 +12,16 @@ public class Vendeur extends Utilisateur {
 	public void setArticles(List<Article> articles) {
 		this.articles = articles;
 	}
+
+	public Vendeur() {
+		super();
+	}
+
+	public Vendeur(List<Article> articles) {
+		super();
+		this.articles = articles;
+	}
+	
+	
+	
 }

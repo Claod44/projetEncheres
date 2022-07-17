@@ -30,4 +30,18 @@ public class Retrait {
 	public void setVille(String ville) {
 		this.ville = ville;
 	}
+
+	public Retrait() {
+		super();
+	}
+
+	public Retrait(String rue, String code_postal, String ville) {
+		super();
+		this.rue = rue;
+		this.code_postal = code_postal;
+		this.ville = ville;
+	}
+	
+	
+	
 }
