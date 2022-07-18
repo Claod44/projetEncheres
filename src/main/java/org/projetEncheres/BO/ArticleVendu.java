@@ -1,8 +1,9 @@
 package org.projetEncheres.BO;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class ArticleVendu extends Article {
+public class ArticleVendu extends Article implements Serializable {
 
 	
 	private Double prixVente;

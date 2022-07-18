@@ -1,6 +1,8 @@
 package org.projetEncheres.BO;
 
-public class Retrait {
+import java.io.Serializable;
+
+public class Retrait implements Serializable {
 	private String rue;
 
 	public String getRue() {

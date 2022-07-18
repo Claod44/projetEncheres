@@ -1,6 +1,8 @@
 package org.projetEncheres.BO;
 
-public class Categorie {
+import java.io.Serializable;
+
+public class Categorie implements Serializable {
 	private Integer noCotegorie;
 
 	public Integer getNoCategorie() {

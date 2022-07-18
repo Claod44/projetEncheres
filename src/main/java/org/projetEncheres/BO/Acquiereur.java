@@ -1,8 +1,9 @@
 package org.projetEncheres.BO;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Acquiereur extends Utilisateur {
+public class Acquiereur extends Utilisateur implements Serializable {
 	private List<Article> acquisitions;
 
 	public List<Article> getEncheresRemportees() {

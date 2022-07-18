@@ -1,10 +1,11 @@
 package org.projetEncheres.BO;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Vente {
+public class Vente implements Serializable {
 	
 	//TODO BETA : gere le temps d'une vente, intégre une liste d'acquiereur
 	

@@ -1,8 +1,9 @@
 package org.projetEncheres.BO;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Enchere {
+public class Enchere implements Serializable {
 	//A revoir avec l'equipe pour résoudre la limite entre une enchere et le contenu de la classe vente
 	private Date dateEnchere;
 
