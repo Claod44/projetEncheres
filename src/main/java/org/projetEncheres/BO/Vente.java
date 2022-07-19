@@ -9,6 +9,11 @@ public class Vente implements Serializable {
 	
 	//TODO BETA : gere le temps d'une vente, intégre une liste d'acquiereur
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3071114700981685602L;
+
 	private Article article;
 
 	public Article getArticle() {

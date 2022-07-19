@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Enchere implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1289750107040088010L;
 	//A revoir avec l'equipe pour résoudre la limite entre une enchere et le contenu de la classe vente
 	private Date dateEnchere;
 

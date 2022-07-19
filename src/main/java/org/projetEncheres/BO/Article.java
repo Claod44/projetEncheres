@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Article implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -50866195841529666L;
 	private Double miseAParix;
 
 	public Double getMiseAPrix() {
@@ -82,6 +86,30 @@ public class Article implements Serializable {
 
 	public void setCategorieDeLarticle(Categorie categorieDeLarticle) {
 		this.categorieArticle = categorieDeLarticle;
+	}
+	
+	private Double prixVente;
+
+	public Double getPrixVente() {
+		return this.prixVente;
+	}
+
+	public void setPrixVente(Double prixVente) {
+		this.prixVente = prixVente;
+	}
+
+	public Article(Double miseAParix, String nomArticle, Integer noArticle, String description, Date dateDebutEncheres,
+			Date dateFinEncheres, Boolean etatVente, Categorie categorieArticle, Double prixVente) {
+		super();
+		this.miseAParix = miseAParix;
+		this.nomArticle = nomArticle;
+		this.noArticle = noArticle;
+		this.description = description;
+		this.dateDebutEncheres = dateDebutEncheres;
+		this.dateFinEncheres = dateFinEncheres;
+		this.etatVente = etatVente;
+		this.categorieArticle = categorieArticle;
+		this.prixVente = prixVente;
 	}
 
 	public Article(Double miseAParix, String nomArticle, Integer noArticle, String description, Date dateDebutEncheres,

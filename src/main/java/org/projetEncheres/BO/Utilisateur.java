@@ -8,6 +8,10 @@ public class Utilisateur implements Serializable {
 	//Se souvenir de moi : cookie
 	//Setters a verifier : utiliser trim -> verifier null ou empty POUR TOUS donc fonction dans classe statique "utilitaire", codePostal et Telephone a verifier : type numerique seulement (10 pour telephone, 5 pour code postal)
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8472308215182534529L;
 	private Integer credit;
 
 	public Integer getCredit() {
