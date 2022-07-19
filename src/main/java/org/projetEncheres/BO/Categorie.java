@@ -3,6 +3,10 @@ package org.projetEncheres.BO;
 import java.io.Serializable;
 
 public class Categorie implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 205247634236763306L;
 	private Integer noCotegorie;
 
 	public Integer getNoCategorie() {
