@@ -24,11 +24,11 @@ public class Utilisateur implements Serializable {
 
 	private String Nom;
 
-	public String getName() {
+	public String getNom() {
 		return this.Nom;
 	}
 
-	public void setName(String Nom) {
+	public void setNom(String Nom) {
 		this.Nom = Nom;
 	}
 	
@@ -52,13 +52,13 @@ public class Utilisateur implements Serializable {
 		this.prenom = prenom;
 	}
 	
-	private Utilisateur administrateur;
+	private Boolean administrateur;
 
-	public Utilisateur getAdministrateur() {
+	public Boolean isAdministrateur() {
 		return this.administrateur;
 	}
 
-	public void setAdministrateur(Utilisateur administrateur) {
+	public void setIsAdministrateur(Boolean administrateur) {
 		this.administrateur = administrateur;
 	}
 	
@@ -112,6 +112,16 @@ public class Utilisateur implements Serializable {
 		this.codePostal = codePostal;
 	}
 	
+	private String ville;
+
+	public String getVille() {
+		return this.ville;
+	}
+
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+	
 	private String motDePasse;
 
 	public String getMotDePasse() {
@@ -126,13 +136,9 @@ public class Utilisateur implements Serializable {
 		super();
 	}
 
-	public Utilisateur(Integer credit) {
-		super();
-		this.credit = credit;
-	}
-
-	public Utilisateur(Integer credit, String nom, String prenom, Integer noUtilisateur, Utilisateur administrateur,
-			String pseudo, String email, String telephone, String rue, String codePostal, String motDePasse) {
+	public Utilisateur(Integer credit, String nom, String prenom, Integer noUtilisateur, Boolean administrateur,
+			String pseudo, String email, String telephone, String rue, String codePostal, String ville,
+			String motDePasse) {
 		super();
 		this.credit = credit;
 		Nom = nom;
@@ -144,8 +150,11 @@ public class Utilisateur implements Serializable {
 		this.telephone = telephone;
 		this.rue = rue;
 		this.codePostal = codePostal;
+		this.ville = ville;
 		this.motDePasse = motDePasse;
 	}
+
+	
 	
 	
 	

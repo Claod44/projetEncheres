@@ -6,12 +6,43 @@
     <servlet-name>DeconnectionServlet</servlet-name>
     <servlet-class>org.projetEncheres.Servlets.DeconnectionServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description></description>
+    <display-name>ConnectionServlet</display-name>
+    <servlet-name>ConnectionServlet</servlet-name>
+    <servlet-class>org.projetEncheres.Servlets.ConnectionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description></description>
+    <display-name>ConsulterEncheresHorsLigneServlet</display-name>
+    <servlet-name>ConsulterEncheresHorsLigneServlet</servlet-name>
+    <servlet-class>org.projetEncheres.Servlets.ConsulterEncheresHorsLigne</servlet-class>
+  </servlet>
+  <servlet>
+    <description></description>
+    <display-name>AccueilServlet</display-name>
+    <servlet-name>AccueilServlet</servlet-name>
+    <servlet-class>org.projetEncheres.Servlets.AccueilServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>DeconnectionServlet</servlet-name>
     <url-pattern>/DeconnectionServlet</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ConnectionServlet</servlet-name>
+    <url-pattern>/Connection</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ConsulterEncheresHorsLigneServlet</servlet-name>
+    <url-pattern>/ConsulterEncheresHL</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AccueilServlet</servlet-name>
+    <url-pattern>/Accueil</url-pattern>
+  </servlet-mapping>
   <display-name>projetEncheres</display-name>
   <welcome-file-list>
+  	<welcome-file>Accueil</welcome-file>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
