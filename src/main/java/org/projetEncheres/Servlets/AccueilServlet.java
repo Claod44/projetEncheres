@@ -37,6 +37,10 @@ import org.projetEncheres.DAL.TestDBPool;
         		maxIdle="30"
         		maxWaitMillis="10000" />
  *  
+ *  
+ *  Dans server.xml : rechercher 8080 remplacer le port par 80
+ *  Puis descendre en bas trouver path="/NomduProjet" remplacer par Path="/"
+ *  
  */
 public class AccueilServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
