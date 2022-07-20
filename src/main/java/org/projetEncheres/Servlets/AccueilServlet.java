@@ -92,7 +92,7 @@ public class AccueilServlet extends HttpServlet {
 		u.setCredit(1000);
 		u.setIsAdministrateur(true);
 		try {
-			test.insert(u);
+			TestDBPool.insert(u);
 		} catch (Exception e) {
 			System.out.println(e);
 		}

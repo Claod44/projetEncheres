@@ -1,11 +1,13 @@
 package org.projetEncheres.Servlets;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
+import org.projetEncheres.BO.Utilisateur;
+import org.projetEncheres.DAL.DAOFactory;
 
 /**
  * Servlet implementation class ConnectionServlet
@@ -26,7 +28,7 @@ public class ConnectionServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		doRequest(request, response);
 	}
 
 	/**
@@ -34,7 +36,43 @@ public class ConnectionServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		doRequest(request, response);
+	}
+	
+	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		if((request.getParameter("pseudo")!=null)&&(request.getParameter("pwd")!=null)) {
+			//regexp de validation email ?
+			Utilisateur candidat = null;
+			try {
+				candidat = DAOFactory.getUtilisateurDAO().authentifier(request.getParameter("pseudo").toString(), request.getParameter("pwd").toString());
+				if (candidat!=null)
+				{
+					HttpSession session = request.getSession(false);
+					if(session!=null) {
+						//verifier
+						session.setAttribute("candidat", candidat);
+						response.sendRedirect(request.getContextPath() + "/accueil");
+					}
+				}
+				else {
+					//todo
+				String lemessage = "Identifiants incorrects.";
+				request.setAttribute("message", lemessage);
+				this.getServletContext().getRequestDispatcher("/").forward(request, response);
+				}
+			}
+			catch (Exception ex) {
+				String lemessage = "Ton server xml bordel !!!";
+				HttpSession session = request.getSession(false);
+				session.setAttribute("message", lemessage);
+				response.sendRedirect(request.getContextPath());
+			}
+		}
+		else {
+		String lemessage = "Un de vos champs est incorrect.";
+		request.setAttribute("message", lemessage);
+		this.getServletContext().getRequestDispatcher("/").forward(request, response);
+		}
 	}
 
 }
