@@ -13,8 +13,9 @@ import org.projetEncheres.EXCEPTIONS.DALException;
 
 public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 	
-	private static final String AUTENTIFIER_STRING = "insert into utilisateurs(pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe, credit, administrateur) values (?,?,?,?,?,?,?,?,?,?,?)";
+	private static final String INSERT_UTILISATEUR_STRING = "insert into utilisateurs(pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe, credit, administrateur) values (?,?,?,?,?,?,?,?,?,?,?)";
 	
+	private static final String AUTENTIFIER_STRING = "SELECT * FROM Utilisateurs WHERE pseudo = ?' AND mot_de_passe = ?";
 	
 	@Override
 	public Utilisateur selectById(Utilisateur utilisateur) throws DALException {
@@ -104,55 +105,51 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 		ResultSet rs = null;
 		Utilisateur u = null;
 		
-		/**try {
-		cnx = GestionnaireDesConnections.getConnexion();
-		rqt = cnx.prepareStatement(sqlSelectById);
-		rqt.setInt(1, articleCritere.getIdArticle());
-
-		rs = rqt.executeQuery();
-		if (rs.next()){
-
-			if (TYPE_STYLO.equalsIgnoreCase(rs.getString("type").trim())){
-
-				art = new Stylo(rs.getInt("idArticle"),
-						rs.getString("marque"),
-						rs.getString("reference").trim(),
-						rs.getString("designation"),
-						rs.getFloat("prixUnitaire"),
-						rs.getInt("qteStock"),
-						rs.getString("couleur"));
-			}
-			if (TYPE_RAMETTE.equalsIgnoreCase(rs.getString("type").trim())){
-				art = new Ramette(rs.getInt("idArticle"),
-						rs.getString("marque"),
-						rs.getString("reference").trim(),
-						rs.getString("designation"),
-						rs.getFloat("prixUnitaire"),
-						rs.getInt("qteStock"),
-						rs.getInt("grammage"));
-			}
-		}
-
-	} catch (SQLException e) {
-		throw new DALException("selectById failed - article = " + art , e);
-	} finally {
 		try {
-			if (rs != null){
-				rs.close();
-			}
-			if (rqt != null){
-				rqt.close();
-			}
-			if(cnx!=null){
-				cnx.close();
+			cnx = GestionnaireDesConnections.getConnexion();
+			rqt = cnx.prepareStatement(AUTENTIFIER_STRING);
+			rqt.setString(1, pseudo);
+			rqt.setString(1, pwd);
+	
+			rs = rqt.executeQuery();
+			/*(Integer noUtilisateur, String nom, String prenom,
+			String pseudo, String email, String motDePasse, String telephone, String rue, String codePostal, String ville,
+			Integer credit, Boolean administrateur)*/
+			while (rs.next()){
+				u = new Utilisateur(
+						rs.getInt("no_utilisateur"),
+						rs.getString("nom"),
+						rs.getString("prenom"),
+						rs.getString("pseudo"),
+						rs.getString("email"),
+						rs.getString("mot_de_passe"),
+						rs.getString("telephone"),
+						rs.getString("rue"),
+						rs.getString("code_postal"),
+						rs.getString("ville"),
+						rs.getInt("credit"),
+						rs.getBoolean("administrateur")
+				);
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+			throw new DALException("authentifier failed - utilisateur = ", e);
+		} finally {
+			try {
+				if (rs != null){
+					rs.close();
+				}
+				if (rqt != null){
+					rqt.close();
+				}
+				if(cnx!=null){
+					cnx.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 
-	} **/
+		}
 		
-		
-		return null;
+		return u;
 	}
 }

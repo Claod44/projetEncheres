@@ -136,9 +136,27 @@ public class Utilisateur implements Serializable {
 		super();
 	}
 
-	public Utilisateur(Integer credit, String nom, String prenom, Integer noUtilisateur, Boolean administrateur,
+	public Utilisateur(String nom, String prenom, Boolean administrateur,
 			String pseudo, String email, String telephone, String rue, String codePostal, String ville,
 			String motDePasse) {
+		super();
+		this.credit = 1000;
+		Nom = nom;
+		this.prenom = prenom;
+		this.noUtilisateur = noUtilisateur;
+		this.administrateur = administrateur;
+		this.pseudo = pseudo;
+		this.email = email;
+		this.telephone = telephone;
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+		this.motDePasse = motDePasse;
+	}
+
+	public Utilisateur(Integer noUtilisateur, String nom, String prenom,
+			String pseudo, String email, String motDePasse, String telephone, String rue, String codePostal, String ville,
+			Integer credit, Boolean administrateur) {
 		super();
 		this.credit = credit;
 		Nom = nom;
@@ -153,6 +171,8 @@ public class Utilisateur implements Serializable {
 		this.ville = ville;
 		this.motDePasse = motDePasse;
 	}
+	
+	
 
 	
 	
