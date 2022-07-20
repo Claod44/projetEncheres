@@ -22,14 +22,14 @@ public class Utilisateur implements Serializable {
 		this.credit = amount;
 	}
 
-	private String Nom;
+	private String nom;
 
 	public String getNom() {
-		return this.Nom;
+		return this.nom;
 	}
 
 	public void setNom(String Nom) {
-		this.Nom = Nom;
+		this.nom = Nom;
 	}
 	
 	private String prenom;
@@ -135,16 +135,15 @@ public class Utilisateur implements Serializable {
 	public Utilisateur() {
 		super();
 	}
-
-	public Utilisateur(String nom, String prenom, Boolean administrateur,
-			String pseudo, String email, String telephone, String rue, String codePostal, String ville,
-			String motDePasse) {
-		super();
+	
+	public Utilisateur(String nom, String prenom,
+			String pseudo, String email, String motDePasse,
+			String telephone, String rue, String codePostal, String ville) {
+		this();
 		this.credit = 1000;
-		Nom = nom;
+		this.nom = nom;
 		this.prenom = prenom;
-		this.noUtilisateur = noUtilisateur;
-		this.administrateur = administrateur;
+		this.administrateur = false;
 		this.pseudo = pseudo;
 		this.email = email;
 		this.telephone = telephone;
@@ -154,12 +153,50 @@ public class Utilisateur implements Serializable {
 		this.motDePasse = motDePasse;
 	}
 
-	public Utilisateur(Integer noUtilisateur, String nom, String prenom,
-			String pseudo, String email, String motDePasse, String telephone, String rue, String codePostal, String ville,
+	public Utilisateur(String nom, String prenom,
+			String pseudo, String email, String motDePasse,
+			String telephone, String rue, String codePostal, String ville, Boolean administrateur) {
+		this(nom, prenom, pseudo, email, motDePasse, telephone, rue, codePostal, ville);
+		this.credit = 1000;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.administrateur = administrateur;
+		this.pseudo = pseudo;
+		this.email = email;
+		this.telephone = telephone;
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+		this.motDePasse = motDePasse;
+	}
+	
+	public Utilisateur(Integer noUtilisateur,
+			String nom, String prenom,
+			String pseudo, String email, String motDePasse,
+			String telephone, String rue, String codePostal, String ville) {
+		this();
+		this.credit = 1000;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.noUtilisateur = noUtilisateur;
+		this.administrateur = false;
+		this.pseudo = pseudo;
+		this.email = email;
+		this.telephone = telephone;
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+		this.motDePasse = motDePasse;
+	}
+
+	public Utilisateur(Integer noUtilisateur,
+			String nom, String prenom,
+			String pseudo, String email, String motDePasse,
+			String telephone, String rue, String codePostal, String ville,
 			Integer credit, Boolean administrateur) {
-		super();
+		this();
 		this.credit = credit;
-		Nom = nom;
+		this.nom = nom;
 		this.prenom = prenom;
 		this.noUtilisateur = noUtilisateur;
 		this.administrateur = administrateur;

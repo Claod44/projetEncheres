@@ -42,15 +42,15 @@ public class ConnectionServlet extends HttpServlet {
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		if((request.getParameter("pseudo")!=null)&&(request.getParameter("pwd")!=null)) {
 			//regexp de validation email ?
-			Utilisateur candidat = null;
+			Utilisateur utilisateur = null;
 			try {
-				candidat = DAOFactory.getUtilisateurDAO().authentifier(request.getParameter("pseudo").toString(), request.getParameter("pwd").toString());
-				if (candidat!=null)
+				utilisateur = DAOFactory.getUtilisateurDAO().authentifier(request.getParameter("pseudo").toString(), request.getParameter("pwd").toString());
+				if (utilisateur!=null)
 				{
 					HttpSession session = request.getSession(false);
 					if(session!=null) {
 						//verifier
-						session.setAttribute("candidat", candidat);
+						session.setAttribute("utilisateur", utilisateur);
 						response.sendRedirect(request.getContextPath() + "/accueil");
 					}
 				}

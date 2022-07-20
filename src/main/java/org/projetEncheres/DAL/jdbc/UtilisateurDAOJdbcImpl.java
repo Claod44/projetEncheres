@@ -13,7 +13,7 @@ import org.projetEncheres.EXCEPTIONS.DALException;
 
 public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 	
-	private static final String INSERT_UTILISATEUR_STRING = "insert into utilisateurs(pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe, credit, administrateur) values (?,?,?,?,?,?,?,?,?,?,?)";
+	private static final String INSERT_UTILISATEUR_STRING = "insert into utilisateurs(pseudo, nom, prenom, email, mot_de_passe, telephone, rue, code_postal, ville, credit, administrateur) values (?,?,?,?,?,?,?,?,?,?,?)";
 	
 	private static final String AUTENTIFIER_STRING = "SELECT * FROM Utilisateurs WHERE pseudo = ?' AND mot_de_passe = ?";
 	
@@ -87,7 +87,43 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 
 	@Override
 	public void insert(Utilisateur data) throws DALException {
-		// TODO Auto-generated method stub
+		Connection cnx = null;
+		PreparedStatement rqt = null;
+		//pseudo, nom, prenom, email, mot_de_passe, telephone, rue, code_postal, ville, credit, administrateur
+		try{
+			cnx = GestionnaireDesConnections.getConnexion();
+			rqt=cnx.prepareStatement(INSERT_UTILISATEUR_STRING);
+			
+			rqt.setString(1, data.getPseudo());
+			rqt.setString(2, data.getNom());
+			rqt.setString(3, data.getPrenom());
+			rqt.setString(4, data.getEmail());
+			rqt.setString(5, data.getMotDePasse());
+			rqt.setString(6, data.getTelephone());
+			rqt.setString(7, data.getRue());
+			rqt.setString(8, data.getCodePostal());
+			rqt.setString(9, data.getVille());
+			rqt.setInt(11, data.getCredit());
+			rqt.setBoolean(11, data.isAdministrateur());
+			
+			rqt.executeUpdate();
+			cnx.commit();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			throw new DALException("Insert failed - utilisateur = ", e);
+		} finally {
+			try {
+				if (rqt != null){
+					rqt.close();
+				}
+				if(cnx!=null){
+					cnx.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+
+		}	
 		
 	}
 
