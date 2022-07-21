@@ -100,4 +100,14 @@
     <servlet-name>TestDBPool</servlet-name>
     <url-pattern>/TestDBPool</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AfficherProfileUtilisateurServlet</display-name>
+    <servlet-name>AfficherProfileUtilisateurServlet</servlet-name>
+    <servlet-class>org.projetEncheres.Servlets.AfficherProfileUtilisateurServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AfficherProfileUtilisateurServlet</servlet-name>
+    <url-pattern>/AfficherProfileUtilisateur</url-pattern>
+  </servlet-mapping>
 </web-app>
