@@ -44,7 +44,7 @@ public class ConnectionServlet extends HttpServlet {
 			//regexp de validation email ?
 			Utilisateur utilisateur = null;
 			try {
-				utilisateur = DAOFactory.getUtilisateurDAO().authentifier(request.getParameter("pseudo").toString(), request.getParameter("pwd").toString());
+				utilisateur = DAOFactory.getUtilisateurDAO().authentifier(request.getParameter("pseudo").toString(), request.getParameter("mot_de_passe").toString());
 				if (utilisateur!=null)
 				{
 					HttpSession session = request.getSession(false);
