@@ -19,7 +19,7 @@
 		</div>
 			<div class="btnsForm">
 			<button type="submit">Connexion</button>
-			<a href="href=<%=application.getContextPath()%>/inscription.jsp" >Inscription</a>
+			<a href="<%=application.getContextPath()%>/inscription.jsp" >Inscription</a>
 		</div>
 	</form>
 </main>
