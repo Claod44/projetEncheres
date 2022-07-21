@@ -3,17 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 </head>
-<body>
 <section class="Menu" style="display:none;">
 	<nav>
 	 <h2>ENI-Enchères</h2>
 		<ul>
   			<li><a href="<%=application.getContextPath()%>./WEB-INF/inscription.jsp">s'inscrire</a>
-  			<a href="<%=application.getContextPath()%>./WEB-INF/connection.jsp">Se connecter</a></li>
+  			<%@ include file="connection.jspf"%>
 		</ul>
 	</nav>
 </section>
-</body>
-</html>

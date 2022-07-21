@@ -3,11 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 </head>
-<body>
 <main class="connexion">
-	<form action="Connexion" method="post" class="Connexion" >
+	<form action="connexion" method="post" class="Connexion" >
 		<h1>Connexion</h1>
 		<div class="groupForm">
 			<label for="pseudo">Pseudo</label> <input type="text" id="pseudo"
@@ -19,9 +18,6 @@
 		</div>
 			<div class="btnsForm">
 			<button type="submit">Connexion</button>
-			<a href="<%=application.getContextPath()%>/inscription.jsp" >Inscription</a>
 		</div>
 	</form>
 </main>
-</body>
-</html>

@@ -8,6 +8,6 @@
     </head>
 
     <body>
-    <%@ include file="../fragments/menu.jspf"%>
+    <%@ include file="fragments/menu.jspf"%>
     </body>
 </html>
