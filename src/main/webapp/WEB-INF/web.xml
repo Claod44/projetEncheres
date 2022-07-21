@@ -24,6 +24,16 @@
     <servlet-name>AccueilServlet</servlet-name>
     <servlet-class>org.projetEncheres.Servlets.AccueilServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description></description>
+    <display-name>TestDBPoolServlet</display-name>
+    <servlet-name>TestDBPoolServlet</servlet-name>
+    <servlet-class>org.projetEncheres.Servlets.TestDBPoolServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestDBPoolServlet</servlet-name>
+    <url-pattern>/TestDB</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>DeconnectionServlet</servlet-name>
     <url-pattern>/DeconnectionServlet</url-pattern>
@@ -79,5 +89,15 @@
   <servlet-mapping>
     <servlet-name>ModifierProfileUtilisateurServlet</servlet-name>
     <url-pattern>/modifierprofile</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestDBPool</display-name>
+    <servlet-name>TestDBPool</servlet-name>
+    <servlet-class>org.projetEncheres.Servlets.TestDBPool</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestDBPool</servlet-name>
+    <url-pattern>/TestDBPool</url-pattern>
   </servlet-mapping>
 </web-app>
