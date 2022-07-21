@@ -1,11 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-</head>
-<section class="Menu" style="display:none;">
+<section class="Menu">
 	<nav>
 	 <h2>ENI-Enchères</h2>
 		<ul>

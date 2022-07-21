@@ -6,7 +6,6 @@
         <title>Home</title>
         <meta charset="UTF-8">
     </head>
-
     <body>
     <%@ include file="fragments/menu.jspf"%>
     </body>
