@@ -1,5 +1,6 @@
 package org.projetEncheres.Servlets;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -52,7 +53,9 @@ public class InscriptionServlet extends HttpServlet {
 			// TODO Pseudo deja prit ? Erreur connexion bdd ? email deja prit ? Puis renvoyer vers inscription avec formulaire encore rempli
 			e.printStackTrace();
 		}
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		RequestDispatcher dispatcher;
+		dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/inscription.jsp"); 
+		dispatcher.forward(request, response);
 	}
 
 }
