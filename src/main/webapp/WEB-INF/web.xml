@@ -70,4 +70,14 @@
     <servlet-name>InscriptionServlet</servlet-name>
     <url-pattern>/InscriptionServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ModifierProfileUtilisateurServlet</display-name>
+    <servlet-name>ModifierProfileUtilisateurServlet</servlet-name>
+    <servlet-class>org.projetEncheres.Servlets.ModifierProfileUtilisateurServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModifierProfileUtilisateurServlet</servlet-name>
+    <url-pattern>/modifierprofile</url-pattern>
+  </servlet-mapping>
 </web-app>
