@@ -40,7 +40,7 @@ public class ConnectionServlet extends HttpServlet {
 	}
 	
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		if((request.getParameter("pseudo")!=null)&&(request.getParameter("pwd")!=null)) {
+		if((request.getParameter("pseudo")!=null)&&(request.getParameter("mot_de_passe")!=null)) {
 			//regexp de validation email ?
 			Utilisateur utilisateur = null;
 			try {
