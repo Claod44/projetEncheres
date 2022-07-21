@@ -1,14 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 </head>
 <body>
 <section class="Menu" style="display:none;">
 	<nav>
-	 <h2>ENI-Enchères</h2>
+	 <h2>ENI-EnchÃ¨res</h2>
 		<ul>
   			<li><a href="<%=application.getContextPath()%>./WEB-INF/inscription.jsp">s'inscrire</a>
   			<a href="<%=application.getContextPath()%>./WEB-INF/connection.jsp">Se connecter</a></li>
