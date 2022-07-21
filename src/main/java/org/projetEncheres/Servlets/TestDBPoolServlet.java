@@ -63,6 +63,7 @@ public class TestDBPoolServlet extends HttpServlet {
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 }
