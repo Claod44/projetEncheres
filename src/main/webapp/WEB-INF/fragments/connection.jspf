@@ -2,18 +2,21 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <div class="connexion">
-	<form action="connexion" method="post" class="Connexion" >
+	<form action="Connection" method="post" class="Connexion" >
 		<h1>Connexion</h1>
 		<div class="groupForm">
 			<label for="pseudo">Pseudo</label> <input type="text" id="pseudo"
 				name="pseudo" />
 		</div>
 		<div class="groupForm">
-			<label for="mots_de_passe">Mot de passe</label> <input type="password" id="mots_de_passe"
-				name="mots_de_passe" />
+			<label for="mot_de_passe">Mot de passe</label> <input type="password" id="mot_de_passe"
+				name="mot_de_passe" />
 		</div>
 			<div class="btnsForm">
 			<button type="submit">Connexion</button>
 		</div>
 	</form>
+	<p id="formulaire_connexion_erreur">
+					<%if (session.getAttribute("message_connection_pseudo_ou_mot_de_passe_invalide") != null)out.println(session.getAttribute("message_connection_pseudo_ou_mot_de_passe_invalide"));%>
+	</p>
 </div>

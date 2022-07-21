@@ -5,8 +5,12 @@
 	<nav>
 	 <h2>ENI-Enchères</h2>
 		<ul>
-  			<li><a href="<%=application.getContextPath()%>./WEB-INF/inscription.jsp">s'inscrire</a>
+  		<% if(null == session.getAttribute("utilisateur")){ %>
+  			<li><a href="<%=application.getContextPath()%>/Inscription">s'inscrire</a>
   			<%@ include file="connection.jspf"%>
+  		<% } else { %>
+  			<li><a href="<%=application.getContextPath()%>/Deconnection">Deconnexion</a>
+  		<% } %>
 		</ul>
 	</nav>
 </section>

@@ -46,7 +46,8 @@ public class DeconnectionServlet extends HttpServlet {
 		HttpSession session = request.getSession(false);
 		if(session!=null) {
 			session.invalidate();
-			response.sendRedirect(request.getContextPath());
+			System.out.println("Deconnecté reroutage ?");
+			response.sendRedirect(request.getContextPath() + "/Accueil");
 		}
 	}
 

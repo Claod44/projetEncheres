@@ -8,12 +8,6 @@
   </servlet>
   <servlet>
     <description></description>
-    <display-name>ConnectionServlet</display-name>
-    <servlet-name>ConnectionServlet</servlet-name>
-    <servlet-class>org.projetEncheres.Servlets.ConnectionServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <description></description>
     <display-name>ConsulterEncheresHorsLigneServlet</display-name>
     <servlet-name>ConsulterEncheresHorsLigneServlet</servlet-name>
     <servlet-class>org.projetEncheres.Servlets.ConsulterEncheresHorsLigne</servlet-class>
@@ -36,11 +30,7 @@
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>DeconnectionServlet</servlet-name>
-    <url-pattern>/DeconnectionServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>ConnectionServlet</servlet-name>
-    <url-pattern>/Connection</url-pattern>
+    <url-pattern>/Deconnection</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ConsulterEncheresHorsLigneServlet</servlet-name>
@@ -68,7 +58,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ConnectionServlet</servlet-name>
-    <url-pattern>/ConnectionServlet</url-pattern>
+    <url-pattern>/Connection</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -78,7 +68,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>InscriptionServlet</servlet-name>
-    <url-pattern>/InscriptionServlet</url-pattern>
+    <url-pattern>/Inscription</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -88,7 +78,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ModifierProfileUtilisateurServlet</servlet-name>
-    <url-pattern>/modifierprofile</url-pattern>
+    <url-pattern>/ModifierProfile</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -97,7 +87,7 @@
     <servlet-class>org.projetEncheres.Servlets.TestDBPool</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>TestDBPool</servlet-name>
+    <servlet-name>TestDBPoolServlet</servlet-name>
     <url-pattern>/TestDBPool</url-pattern>
   </servlet-mapping>
   <servlet>

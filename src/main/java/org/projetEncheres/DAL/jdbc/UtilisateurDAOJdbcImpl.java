@@ -15,7 +15,7 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 	
 	private static final String INSERT_UTILISATEUR_STRING = "insert into utilisateurs(pseudo, nom, prenom, email, mot_de_passe, telephone, rue, code_postal, ville, credit, administrateur) values (?,?,?,?,?,?,?,?,?,?,?)";
 	
-	private static final String AUTENTIFIER_STRING = "SELECT * FROM Utilisateurs WHERE pseudo = ?' AND mot_de_passe = ?";
+	private static final String AUTENTIFIER_STRING = "SELECT * FROM utilisateurs WHERE pseudo = ? AND mot_de_passe = ?";
 	
 	@Override
 	public Utilisateur selectById(Utilisateur utilisateur) throws DALException {
@@ -134,8 +134,9 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 	}
 
 	@Override
-	public Utilisateur authentifier(String pseudo, String pwd) throws DALException {
+	public Utilisateur authentifier(String pseudo, String mot_de_passe) throws Exception {
 		// TODO Auto-generated method stub
+		System.out.println("dans la dal utilisateur auth");
 		Connection cnx = null;
 		PreparedStatement rqt = null;
 		ResultSet rs = null;
@@ -145,7 +146,7 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 			cnx = GestionnaireDesConnections.getConnexion();
 			rqt = cnx.prepareStatement(AUTENTIFIER_STRING);
 			rqt.setString(1, pseudo);
-			rqt.setString(1, pwd);
+			rqt.setString(2, mot_de_passe);
 	
 			rs = rqt.executeQuery();
 			/*(Integer noUtilisateur, String nom, String prenom,
@@ -167,10 +168,7 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 						rs.getBoolean("administrateur")
 				);
 			}
-		} catch (SQLException e) {
-			throw new DALException("authentifier failed - utilisateur = ", e);
 		} finally {
-			try {
 				if (rs != null){
 					rs.close();
 				}
@@ -180,12 +178,8 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 				if(cnx!=null){
 					cnx.close();
 				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-
 		}
-		
+		System.out.println(u.getNom());
 		return u;
 	}
 }
