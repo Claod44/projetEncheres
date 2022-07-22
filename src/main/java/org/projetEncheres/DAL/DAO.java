@@ -11,19 +11,19 @@ public interface DAO<T> {
 	 */
 		
 		//Sélectionner un business object par son id
-		public T selectById(T obj) throws DALException;
+		public T selectById(T obj) throws Exception;
 		
 		//Sélectionner tous les business objects 
-		public List<T> selectAll() throws DALException;
+		public List<T> selectAll() throws Exception;
 		
 		//Modifier les attributs d'un business object
-		public void update(T data) throws DALException;
+		public void update(T data) throws Exception;
 		
 		//Insérer un nouveau business object
-		public void insert(T data) throws DALException;
+		public void insert(T data) throws Exception;
 		
 		//Supprimer un business object
-		public void delete(T obj) throws DALException;
+		public void delete(T obj) throws Exception;
 		
 	
 }

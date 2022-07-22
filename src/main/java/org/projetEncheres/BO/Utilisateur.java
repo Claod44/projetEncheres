@@ -14,10 +14,18 @@ public class Utilisateur implements Serializable {
 	private static final long serialVersionUID = -8472308215182534529L;
 	private Integer credit;
 
+	/**
+	 * {@summary get The credit}
+	 * @return The Credit as Integer
+	 */
 	public Integer getCredit() {
 		return this.credit;
 	}
-
+	
+	/**
+	 * {@summary set The credit}
+	 * @param Integer amount
+	 */
 	public void setCredit(Integer amount) {
 		this.credit = amount;
 	}

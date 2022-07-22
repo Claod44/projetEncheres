@@ -49,7 +49,7 @@ public class InscriptionServlet extends HttpServlet {
 			DAOFactory.getUtilisateurDAO().insert(new Utilisateur(request.getParameter("nom").toString(), request.getParameter("prenom").toString(),
 					request.getParameter("pseudo").toString(), request.getParameter("email").toString(), request.getParameter("mot_de_passe").toString(),
 					request.getParameter("telephone").toString(), request.getParameter("rue").toString(), request.getParameter("code_postal").toString(), request.getParameter("ville").toString()));
-		} catch (DALException e) {
+		} catch (Exception e) {
 			// TODO Pseudo deja prit ? Erreur connexion bdd ? email deja prit ? Puis renvoyer vers inscription avec formulaire encore rempli
 			e.printStackTrace();
 		}

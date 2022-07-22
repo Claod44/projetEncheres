@@ -71,7 +71,7 @@ public class ConnectionServlet extends HttpServlet {
 				String message_connection_pseudo_ou_mot_de_passe_invalide = "Pseudo ou mot de passe incorrect";
 				HttpSession session = request.getSession(false);
 				session.setAttribute("message_connection_pseudo_ou_mot_de_passe_invalide", message_connection_pseudo_ou_mot_de_passe_invalide);
-				response.sendRedirect(request.getContextPath() + "/Accueil");
+				response.sendRedirect(request.getContextPath() + "/Accueil"); //TODO demander au formateur ce qui est correct entre SendRedirect et forward
 			}
 		}
 		else {
