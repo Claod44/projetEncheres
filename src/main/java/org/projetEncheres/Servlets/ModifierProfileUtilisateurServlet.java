@@ -88,6 +88,7 @@ public class ModifierProfileUtilisateurServlet extends HttpServlet {
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
+						System.out.println("exception lors de la modification du profile!!!");
 						request.setAttribute("erreur_base_de_donnee", "Les modifications n'ont pas pu être prise en compte à cause d'une problème de base de données, merci de contacter un administrateur."); //TODO centraliser tout les messages dans un fichier a part pour faciliter les modifications
 					}
 					
