@@ -105,7 +105,7 @@ public class ModifierProfileUtilisateurServlet extends HttpServlet {
 			
 		} else {
 			//A :Pas d'utilisateur, on renvoie vers la page précédante avec un message "merci de vous connecter" TODO Filtre ou recuperer la page précédante, incorporer dans la jsp
-			request.setAttribute("utilisateur_non_connecte", "Merci de vous connecter pour accéder à cette page.");
+			request.setAttribute("message_utilisateur_non_connecte", "Merci de vous connecter pour accéder à cette page.");
 			uri = "/WEB-INF/accueil.jsp";
 		}
 		this.getServletContext().getRequestDispatcher(uri).forward(request, response);

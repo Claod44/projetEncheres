@@ -54,7 +54,7 @@ public class ConnectionServlet extends HttpServlet {
 				System.out.println(utilisateur.getNom());
 				if (utilisateur!=null)
 				{
-					HttpSession session = request.getSession(false);
+					HttpSession session = request.getSession(true);
 					if(session!=null) {
 						//verifier
 						session.setAttribute("utilisateur", utilisateur);
@@ -70,7 +70,7 @@ public class ConnectionServlet extends HttpServlet {
 			catch (Exception ex) {
 				System.out.println("exception !!!");
 				String message_connection_pseudo_ou_mot_de_passe_invalide = "Pseudo ou mot de passe incorrect";
-				HttpSession session = request.getSession(false);
+				HttpSession session = request.getSession(true);
 				session.setAttribute("message_connection_pseudo_ou_mot_de_passe_invalide", message_connection_pseudo_ou_mot_de_passe_invalide);
 				response.sendRedirect(request.getContextPath() + "/Accueil"); //TODO demander au formateur ce qui est correct entre SendRedirect et forward
 			}
