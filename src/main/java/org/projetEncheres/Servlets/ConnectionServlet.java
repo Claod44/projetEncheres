@@ -41,6 +41,7 @@ public class ConnectionServlet extends HttpServlet {
 	}
 	
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//TODO ne mettre qu'un seul request dispatcher tout à la fin et l'url dans une variable
 		System.out.println("dans doRequest");
 		System.out.println(request.getParameter("pseudo"));
 		System.out.println(request.getParameter("mot_de_passe"));

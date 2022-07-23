@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-<main class="inscription">
+<main class="Inscription">
 	<form action="Inscription" method="post">
 		<div>
 			<div class="groupForm">
@@ -37,7 +37,7 @@
 			</div>
 			<div class="groupForm">
 				<label for="code_Postal">code Postal</label>
-				<input required type="text" id="code_Postal" name="code_Postal" placeholder="(*FR)  75000" pattern="[0-9]{5}"/>
+				<input required type="text" id="code_Postal" name="code_postal" placeholder="(*FR)  75000" pattern="[0-9]{5}"/>
 			</div>
 			<div class="groupForm">
 				<label for="ville">ville</label>

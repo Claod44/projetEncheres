@@ -15,7 +15,10 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 	
 	private static final String AUTENTIFIER_STRING = "SELECT * FROM utilisateurs WHERE pseudo = ? AND mot_de_passe = ?";
 	
-	private static final String UPDATE_UTILISATEUR_STRING = "UPDATE utilisateurs SET pseudo = ?, nom = ?, prenom = ?, email = ?, mot_de_passe = ?, telephone = ?, rue = ?, code_postal = ?, ville = ? WHERE no_utilisateur = ?";
+	private static final String UPDATE_UTILISATEUR_AVEC_MOT_DE_PASSE_STRING = "UPDATE utilisateurs SET pseudo = ?, email = ?, mot_de_passe = ?, telephone = ?, rue = ?, code_postal = ?, ville = ? WHERE no_utilisateur = ?";
+	
+	private static final String UPDATE_UTILISATEUR_SANS_MOT_DE_PASSE_STRING = "UPDATE utilisateurs SET pseudo = ?, email = ?, telephone = ?, rue = ?, code_postal = ?, ville = ? WHERE no_utilisateur = ?";
+	
 	
 	private static final String SELECT_UTILISATEUR_BY_ID_STRING = "SELECT * FROM utilisateurs WHERE no_utilisateur = ?";
 	
@@ -76,21 +79,32 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 		//pseudo = ?, nom = ?, prenom = ?, email = ?, mot_de_passe = ?, telephone = ?, rue = ?, code_postal = ?, ville = ? WHERE no_utilisateur = ?
 		try{
 			cnx = GestionnaireDesConnections.getConnexion();
-			rqt = cnx.prepareStatement(UPDATE_UTILISATEUR_STRING);
+			if(null!=data.getMotDePasse()) {
+				rqt = cnx.prepareStatement(UPDATE_UTILISATEUR_AVEC_MOT_DE_PASSE_STRING);
+			} else {
+				rqt = cnx.prepareStatement(UPDATE_UTILISATEUR_SANS_MOT_DE_PASSE_STRING);
+			}
+			System.out.println("dans la dal pour update utilisateur");
 			rqt.setString(1, data.getPseudo());
-			rqt.setString(2, data.getNom());
-			rqt.setString(3, data.getPrenom());
-			rqt.setString(4, data.getEmail());
-			rqt.setString(5, data.getMotDePasse());
-			rqt.setString(6, data.getTelephone());
-			rqt.setString(7, data.getRue());
-			rqt.setString(8, data.getCodePostal());
-			rqt.setString(9, data.getVille());
-			rqt.setInt(9, data.getNoUtilisateur());
+			rqt.setString(2, data.getEmail());
+			if(null!=data.getMotDePasse()) {
+				rqt.setString(3, data.getMotDePasse());
+				rqt.setString(4, data.getTelephone());
+				rqt.setString(5, data.getRue());
+				rqt.setString(6, data.getCodePostal());
+				rqt.setString(7, data.getVille());
+				rqt.setInt(8, data.getNoUtilisateur());
+			} else {
+				rqt.setString(3, data.getTelephone());
+				rqt.setString(4, data.getRue());
+				rqt.setString(5, data.getCodePostal());
+				rqt.setString(6, data.getVille());
+				rqt.setInt(7, data.getNoUtilisateur());
+			}
 
 			rqt.executeUpdate();
 			cnx.commit();
-		}finally{
+		} finally {
 			if (rqt != null) rqt.close();
 			if (cnx != null) cnx.close();
 		}
@@ -115,7 +129,7 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 			rqt.setString(7, data.getRue());
 			rqt.setString(8, data.getCodePostal());
 			rqt.setString(9, data.getVille());
-			rqt.setInt(11, data.getCredit());
+			rqt.setInt(10, data.getCredit());
 			rqt.setBoolean(11, data.isAdministrateur());
 			
 			rqt.executeUpdate();

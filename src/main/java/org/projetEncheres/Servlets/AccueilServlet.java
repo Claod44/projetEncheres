@@ -75,8 +75,6 @@ public class AccueilServlet extends HttpServlet {
 	 * @throws IOException
 	 */
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher;
-		dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/accueil.jsp"); 
-		dispatcher.forward(request, response);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/accueil.jsp").forward(request, response);
 	}
 }
