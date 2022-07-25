@@ -13,37 +13,37 @@ pageEncoding="UTF-8"%>
 			<div>
 				<div class="groupForm">
 					<p>pseudo :</p>
-					<p>${utilisateur.pseudo}</p>
+					<p>${Utilisateur.getPseudo()}</p>
 				</div>
 				<div class="groupForm">
 					<p>nom :</p>
-					<p>${utilisateur.nom}</p>
+					<p>${Utilisateur.getNom()}</p>
 				</div>
 				<div class="groupForm">
 					<p>prénom :</p>
-					<p>${utilisateur.prenom}</p>
+					<p>${Utilisateur.getPrenom()}</p>
 				</div>
 				<div class="groupForm">
 					<p>email :</p>
-					<p>${utilisateur.email}</p>
+					<p>${Utilisateur.getEmail()}</p>
 				</div>
 			</div>
 			<div>
 				<div class="groupForm">
 					<p>téléphone :</p>
-					<p>${utilisateur.telephone}</p>
+					<p>${Utilisateur.getTelephone()}</p>
 				</div>
 				<div class="groupForm">
 					<p>rue :</p>
-					<p>${utilisateur.rue}</p>
+					<p>${Utilisateur.getRue()}</p>
 				</div>
 				<div class="groupForm">
 					<p>code Postal :</p>
-					<p>${utilisateur.codePostal}</p>
+					<p>${Utilisateur.getCodePostal()}</p>
 				</div>
 				<div class="groupForm">
 					<p>ville :</p>
-					<p>${utilisateur.ville}</p>
+					<p>${Utilisateur.getVille()}</p>
 				</div>
 			</div>
 			<div class="btnsForm">

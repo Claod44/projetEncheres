@@ -1,5 +1,6 @@
 package org.projetEncheres.Servlets;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,6 +11,9 @@ import java.io.IOException;
 /**
  * Servlet implementation class AfficherProfileUtilisateurServlet
  */
+
+@WebServlet("/MonProfil")
+
 public class AfficherProfileUtilisateurServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -26,7 +30,10 @@ public class AfficherProfileUtilisateurServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		// affichage de la jsp
+		RequestDispatcher rd = null;
+        rd = request.getRequestDispatcher("WEB-INF/profile.jsp");
+        rd.forward(request, response);
 	}
 
 	/**
@@ -34,7 +41,12 @@ public class AfficherProfileUtilisateurServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+	
+	}
+	
+	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
