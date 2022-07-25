@@ -100,4 +100,14 @@
     <servlet-name>AfficherProfileUtilisateurServlet</servlet-name>
     <url-pattern>/AfficherProfileUtilisateur</url-pattern>
   </servlet-mapping>
+  <filter>
+    <display-name>ConnectionFilter</display-name>
+    <filter-name>ConnectionFilter</filter-name>
+    <filter-class>org.projetEncheres.FILTERS.ConnectionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ConnectionFilter</filter-name>
+    <url-pattern>/ModifierProfile</url-pattern>
+    <url-pattern>/AfficherProfile</url-pattern>
+  </filter-mapping>
 </web-app>

@@ -17,6 +17,8 @@
 		</div>
 	</form>
 	<p id="formulaire_connexion_erreur">
-					<%if (session.getAttribute("message_connection_pseudo_ou_mot_de_passe_invalide") != null)out.println(session.getAttribute("message_connection_pseudo_ou_mot_de_passe_invalide"));%>
+					<%if (session.getAttribute("message_connection_pseudo_ou_mot_de_passe_invalide") != null)out.print(session.getAttribute("message_connection_pseudo_ou_mot_de_passe_invalide"));%>
+					<%if (session.getAttribute("message_utilisateur_non_connecte") != null)out.print(session.getAttribute("message_utilisateur_non_connecte"));%>
+					
 	</p>
 </div>
