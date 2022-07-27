@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+input[type="checkbox"]#connection_switch, form#connection_form {
+  display: none;
+}
+
+input[type=checkbox]:checked + form#connection_form {
+	display: block;
+}

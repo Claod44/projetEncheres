@@ -44,7 +44,7 @@ public class AfficherProfileUtilisateurServlet extends HttpServlet {
 	
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String uri = "WEB-INF/profile.jsp";
+		String uri = "/WEB-INF/profile.jsp";
 		// affichage de la jsp
 		//RequestDispatcher rd = null;
         //rd = request.getRequestDispatcher("WEB-INF/profile.jsp");

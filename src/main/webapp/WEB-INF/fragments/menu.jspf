@@ -4,14 +4,13 @@
 <!DOCTYPE html>
 <section class="Menu">
 	<nav>
-	 <h2>ENI-Enchères</h2>
 		<ul>
   		<% if(null == session.getAttribute("utilisateur")){ %>
   			<%@ include file="connection.jspf"%>
   			<li><a href="<%=application.getContextPath()%>/Inscription">s'inscrire</a>
   		<% } else {  Utilisateur u = (Utilisateur)session.getAttribute("utilisateur"); %>
   			<li><p>Bonjour <% out.print(u.getPseudo()); %></p></li>
-  			<li><a href="<%=application.getContextPath()%>/ModifierProfile">Modifier le profile</a></p></li>
+  			<li><a href="<%=application.getContextPath()%>/AfficherProfile">Profile</a></p></li>
   			<li><a href="<%=application.getContextPath()%>/Deconnection">Deconnexion</a></li>
   		<% } %>
 		</ul>

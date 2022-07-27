@@ -4,8 +4,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<title>Inscription</title>
 </head>
 <body>
+<%@ include file="fragments/header.jspf"%>
+<%@ include file="fragments/menu.jspf"%>
 <main class="Inscription">
 	<form action="Inscription" method="post">
 		<div>

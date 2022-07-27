@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<div class="connexion">
-	<form action="Connection" method="post" class="Connexion" >
-		<h1>Connexion</h1>
+<div id="connexion_container">
+	<label for="connection_switch" id="connection_switch_label">Connexion</label><input type="checkbox" name="connection_switch" id="connection_switch">
+	<form action="Connection" method="post" class="Connexion" id="connection_form">
 		<div class="groupForm">
 			<label for="pseudo">Pseudo</label> <input type="text" id="pseudo"
 				name="pseudo" />

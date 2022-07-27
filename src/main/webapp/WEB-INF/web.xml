@@ -98,7 +98,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>AfficherProfileUtilisateurServlet</servlet-name>
-    <url-pattern>/AfficherProfileUtilisateur</url-pattern>
+    <url-pattern>/AfficherProfile</url-pattern>
   </servlet-mapping>
   <filter>
     <display-name>ConnectionFilter</display-name>

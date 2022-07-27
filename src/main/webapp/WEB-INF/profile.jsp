@@ -4,8 +4,11 @@ pageEncoding="UTF-8"%>
 <html>
 <head>
 <meta charset="UTF-8">
+<title>Profile</title>
 </head>
 <body>
+<%@ include file="fragments/header.jspf"%>
+<%@ include file="fragments/menu.jspf"%>
 <main class="profil">
 	<section class="monprofil">
 		<h1>Profil</h1>
@@ -47,7 +50,7 @@ pageEncoding="UTF-8"%>
 				</div>
 			</div>
 			<div class="btnsForm">
-				<a href="">Modifier</a>
+				<a href="<%=application.getContextPath()%>/ModifierProfile">Modifier</a>
 			</div>
 		</div>
 	</section>

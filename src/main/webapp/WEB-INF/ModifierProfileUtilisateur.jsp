@@ -4,11 +4,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Modifiez votre profile.</title>
         <meta charset="UTF-8">
+        <title>Modifiez votre profile.</title>
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-    <%@ include file="fragments/menu.jspf"%>
+    <%@ include file="fragments/header.jspf"%>
+	<%@ include file="fragments/menu.jspf"%>
     <form action="ModifierProfile" method="POST">
     <% Utilisateur u = (Utilisateur)session.getAttribute("utilisateur"); %>
     	<label for="pseudo">Pseudo</label><input name="pseudo" type="text" value="<% out.print(u.getPseudo()); %>">

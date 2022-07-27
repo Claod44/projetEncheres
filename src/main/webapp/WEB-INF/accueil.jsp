@@ -3,10 +3,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
         <meta charset="UTF-8">
+        <title>Accueil</title>
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
+    <%@ include file="fragments/header.jspf"%>
     <%@ include file="fragments/menu.jspf"%>
     </body>
 </html>
