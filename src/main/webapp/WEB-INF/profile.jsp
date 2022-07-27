@@ -16,37 +16,37 @@ pageEncoding="UTF-8"%>
 			<div>
 				<div class="groupForm">
 					<p>pseudo :</p>
-					<p>${Utilisateur.getPseudo()}</p>
+					<p>${pseudo}</p>
 				</div>
 				<div class="groupForm">
 					<p>nom :</p>
-					<p>${Utilisateur.getNom()}</p>
+					<p>${nom}</p>
 				</div>
 				<div class="groupForm">
 					<p>prénom :</p>
-					<p>${Utilisateur.getPrenom()}</p>
+					<p>${prenom}</p>
 				</div>
 				<div class="groupForm">
 					<p>email :</p>
-					<p>${Utilisateur.getEmail()}</p>
+					<p>${email}</p>
 				</div>
 			</div>
 			<div>
 				<div class="groupForm">
 					<p>téléphone :</p>
-					<p>${Utilisateur.getTelephone()}</p>
+					<p>${telephone}</p>
 				</div>
 				<div class="groupForm">
 					<p>rue :</p>
-					<p>${Utilisateur.getRue()}</p>
+					<p>${rue}</p>
 				</div>
 				<div class="groupForm">
 					<p>code Postal :</p>
-					<p>${Utilisateur.getCodePostal()}</p>
+					<p>${code_postal}</p>
 				</div>
 				<div class="groupForm">
 					<p>ville :</p>
-					<p>${Utilisateur.getVille()}</p>
+					<p>${ville}</p>
 				</div>
 			</div>
 			<div class="btnsForm">

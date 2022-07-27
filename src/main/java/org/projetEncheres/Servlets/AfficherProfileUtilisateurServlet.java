@@ -6,7 +6,11 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
+
+import org.projetEncheres.BO.Utilisateur;
 
 /**
  * Servlet implementation class AfficherProfileUtilisateurServlet
@@ -49,7 +53,19 @@ public class AfficherProfileUtilisateurServlet extends HttpServlet {
 		//RequestDispatcher rd = null;
         //rd = request.getRequestDispatcher("WEB-INF/profile.jsp");
         //rd.forward(request, response);
-		
+		HttpSession session = request.getSession(false);
+		if(null!=session.getAttribute("utilisateur")) {
+			Utilisateur u = (Utilisateur)session.getAttribute("utilisateur");
+			request.setAttribute("pseudo", u.getPseudo());
+				request.setAttribute("nom", u.getNom());
+				request.setAttribute("prenom", u.getPrenom());
+				request.setAttribute("email", u.getEmail());
+				request.setAttribute("telephone", u.getTelephone());
+				request.setAttribute("rue", u.getRue());
+				request.setAttribute("code_postal", u.getCodePostal());
+				request.setAttribute("ville", u.getVille());
+				request.setAttribute("credit", u.getCredit());
+			}
 		this.getServletContext().getRequestDispatcher(uri).forward(request, response);
 	}
 
