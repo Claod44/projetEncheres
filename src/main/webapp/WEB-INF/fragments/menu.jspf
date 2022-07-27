@@ -2,17 +2,19 @@
     pageEncoding="UTF-8"%>
     <%@page import="org.projetEncheres.BO.Utilisateur"%>
 <!DOCTYPE html>
-<section class="Menu">
+<section id="Menu">
 	<nav>
 		<ul>
   		<% if(null == session.getAttribute("utilisateur")){ %>
+  			<li><a href="<%=application.getContextPath()%>/Inscription">Inscription</a>
   			<%@ include file="connection.jspf"%>
-  			<li><a href="<%=application.getContextPath()%>/Inscription">s'inscrire</a>
   		<% } else {  Utilisateur u = (Utilisateur)session.getAttribute("utilisateur"); %>
-  			<li><p>Bonjour <% out.print(u.getPseudo()); %></p></li>
   			<li><a href="<%=application.getContextPath()%>/AfficherProfile">Profile</a></p></li>
   			<li><a href="<%=application.getContextPath()%>/Deconnection">Deconnexion</a></li>
   		<% } %>
 		</ul>
 	</nav>
 </section>
+<% if(null != session.getAttribute("utilisateur")){ Utilisateur u = (Utilisateur)session.getAttribute("utilisateur"); %>
+  			<h3>Bonjour <% out.print(u.getPseudo()); %></h3>
+<% } %>

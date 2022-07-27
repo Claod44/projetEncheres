@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<div id="connexion_container">
+<li id="connexion_container">
 	<label for="connection_switch" id="connection_switch_label">Connexion</label><input type="checkbox" name="connection_switch" id="connection_switch">
 	<form action="Connection" method="post" class="Connexion" id="connection_form">
 		<div class="groupForm">
@@ -13,7 +13,7 @@
 				name="mot_de_passe" />
 		</div>
 			<div class="btnsForm">
-			<button type="submit">Connexion</button>
+			<input type="submit" value="Connexion">
 		</div>
 	</form>
 	<p id="formulaire_connexion_erreur">
@@ -21,4 +21,4 @@
 					<%if (session.getAttribute("message_utilisateur_non_connecte") != null)out.print(session.getAttribute("message_utilisateur_non_connecte"));%>
 					
 	</p>
-</div>
+</li>

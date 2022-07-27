@@ -8,9 +8,11 @@
 	<title>Inscription</title>
 </head>
 <body>
+<video autoplay muted loop id="videobg">
+		<source src="/images/video.mp4" type="video/mp4">
+</video>
 <%@ include file="fragments/header.jspf"%>
 <%@ include file="fragments/menu.jspf"%>
-<main class="Inscription">
 	<form action="Inscription" method="post">
 		<div>
 			<div class="groupForm">
@@ -58,6 +60,5 @@
 			<button type ="reset">Annuler</button>
 		</div>
 	</form>
-</main>
 </body>
 </html>

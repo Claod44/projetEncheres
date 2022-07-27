@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
+	<video autoplay muted loop id="videobg">
+		<source src="/images/video.mp4" type="video/mp4">
+	</video>
     <%@ include file="fragments/header.jspf"%>
     <%@ include file="fragments/menu.jspf"%>
     </body>

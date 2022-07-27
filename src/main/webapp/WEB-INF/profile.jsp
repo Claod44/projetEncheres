@@ -5,11 +5,14 @@ pageEncoding="UTF-8"%>
 <head>
 <meta charset="UTF-8">
 <title>Profile</title>
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<video autoplay muted loop id="videobg">
+		<source src="/images/video.mp4" type="video/mp4">
+</video>
 <%@ include file="fragments/header.jspf"%>
 <%@ include file="fragments/menu.jspf"%>
-<main class="profil">
 	<section class="monprofil">
 		<h1>Profil</h1>
 		<div class="profil-card">
@@ -54,6 +57,5 @@ pageEncoding="UTF-8"%>
 			</div>
 		</div>
 	</section>
-</main>
 </body>
 </html>
