@@ -27,9 +27,10 @@
 	font-weight: bold;
 	font-style: italic;
 }
-***********************************************************************************************************************************************************
+/***********************************************************************************************************************************************************/
 
-	**Pour mobiles**
+																		/**Pour mobiles**/
+	
 html {
 	background-color: white;
 	background-image: url("../images/video.mp4");
@@ -40,75 +41,35 @@ html {
 	background-repeat: no-repeat;
 	background-position: center;
     background-size: cover;
-}
-
-#videobg {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  right: 0;
-  bottom: 0;
-  object-fit: cover;
-  min-height: 100%;
-  min-width: 100%;
-  z-index: -100;
-  background-color: white;
-  background-image:  url("../images/video.mp4");
-  background-position: center center;
-  background-size: contain;
-  filter: opacity(0.7);
-}
-
-input[type="checkbox"]#connection_switch, form#connection_form {
-  display: none;
-}
-
-input[type=checkbox]:checked + form#connection_form {
-	display: block;
-}
-
-
-@media screen and (min-width: 1024px) {
-	**pour ordinateurs**
-html {
-	background-color: white;
-	background-image: url("../images/video.mp4");
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-    background-size: cover;
-}
-
-#videobg {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  right: 0;
-  bottom: 0;
-  object-fit: cover;
-  min-height: 100%;
-  min-width: 100%;
-  z-index: -100;
-  background-color: white;
-  background-image:  url("../images/video.mp4");
-  background-position: center center;
-  background-size: contain;
-  filter: opacity(0.7);
 }
 
 html * {
 	font-family: "Caviar Dreams Sans";
 }
 
+
+	
 body {
-	width: 80%;
-    margin: auto;
+	margin: 0;
 	padding: 0;
+}
+
+#videobg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -100;
+  background-color: white;
+  background-image:  url("../images/video.mp4");
+  background-position: center center;
+  background-size: contain;
+  filter: opacity(0.7);
 }
 
 header {
@@ -126,76 +87,229 @@ header h2 {
     left: calc(50% - 3.1065em);
 }
 
-#Menu, #Menu nav, #Menu ul, #Menu ul li {
-	height: 2.5em;
+/** Imported **/
+
+
+
+.menu-button-container {
+	display: block;
+    height: 2.5em;
+    width: 2.5em;
+    cursor: pointer;
+	position: absolute;
+	right: 1em;
 }
+
+.menu-button {
+	margin-top: 1.05em;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 0.4em;
+  width: 2.5em;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 0.125em;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -1em;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 1em;
+}
+
+#menu-toggle {
+	display: none;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0;
+  transform: rotate(-405deg);
+}
+
+/** End import **/
 
 #Menu {
-	width: 100%;
-	border-top: solid 1px black;
-	border-bottom: solid 1px black;
+	position: relative;
 }
 
-#Menu nav {
-	width: 80%;
-	margin: auto;
+	#Menu nav {
+		height: 2.5em;
+		background: rgb(120 120 120 / 50%);
+	}
+
+	#Menu ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display : none;
+		padding-top: 2.5em;
+	}
+	
+	#Menu ul li {
+		background: white;
+	}
+	
+	#Menu ul li a, #Menu ul li a:visited, label#connection_switch_label {
+		text-decoration: none;
+		text-align: center;
+		color: black;
+		display: block;
+		height: 1.5em;
+		padding: 0.5em;
+		font-weight: bold;
+	}
+	
+	#Menu ul li a:hover, label#connection_switch_label:hover  {
+		color: black;
+		background-color: rgb(255 255 255 / 50%);
+	}
+
+
+input[type="checkbox"]#connection_switch, form#connection_form {
+  display: none;
 }
 
-#Menu ul {
-	width: 100%;
-}
-
-#Menu ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-#Menu ul li {
-	float: left;
-}
-
-#Menu ul li a, #Menu ul li a:visited, label#connection_switch_label {
-	text-decoration: none;
-	color: black;
+input[type=checkbox]:checked + form#connection_form {
 	display: block;
-	height: 1.5em;
-	padding: 0.5em;
-	font-weight: bold;
 }
 
-#Menu ul li a:hover, label#connection_switch_label:hover  {
-	color: black;
-	background-color: rgb(255 255 255 / 50%);
+#menu-toggle:checked ~ ul {
+	display: block;
 }
 
-#connection_form {
-	width: 18em;
-    height: 5.6em;
-    padding: 1em;
-    position: absolute;
-    left: calc(50% - 9em);
-    top: calc(9.5em + 2px);
-    background: rgb(255 255 255 / 50%);
-}
 
-#connection_form label {
-	width: 6.389em;
-    display: inline-block;
-}
+/***********************************************************************************************************************************************************/
 
-#connection_form input[type="password"], #connection_form input[type="text"] {
-	margin-left: 3em;
-}
+																	/**pour ordinateurs**/
 
-#connection_form input[type=submit] {
-	position: absolute;
-	right: 1.3em;
-}
-
-#connection_form label + input {
-	margin-bottom: 1em;
-}
+@media screen and (min-width: 1024px) {
+	
+	html {
+		background-color: white;
+		background-image: url("../images/video.mp4");
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	    background-size: cover;
+	}
+	
+	#videobg {
+	  position: fixed;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  right: 0;
+	  bottom: 0;
+	  object-fit: cover;
+	  min-height: 100%;
+	  min-width: 100%;
+	  z-index: -100;
+	  background-color: white;
+	  background-image:  url("../images/video.mp4");
+	  background-position: center center;
+	  background-size: contain;
+	  filter: opacity(0.7);
+	}
+	
+	body {
+		width: 80%;
+	    margin: auto;
+		padding: 0;
+	}
+	
+	#Menu, #Menu nav, #Menu ul, #Menu ul li {
+		height: 2.5em;
+	}
+	
+	#Menu {
+		width: 100%;
+		border-top: solid 1px black;
+		border-bottom: solid 1px black;
+	}
+	
+	.menu-button-container {
+		display: none;
+	}
+	
+	#Menu nav {
+		width: 80%;
+		margin: auto;
+		background-color: rgb(0 0 0 / 0%);
+	}
+	
+	#Menu ul {
+		width: 100%;
+		display: block;
+		padding-top: 0;
+	}
+	
+	#Menu ul li {
+		float: left;
+		background: rgb(0 0 0 / 0%);
+	}
+	
+	#Menu ul li a, #Menu ul li a:visited, label#connection_switch_label {
+		text-decoration: none;
+		color: black;
+		display: block;
+		height: 1.5em;
+		padding: 0.5em;
+		font-weight: bold;
+	}
+	
+	#Menu ul li a:hover, label#connection_switch_label:hover  {
+		color: black;
+		background-color: rgb(255 255 255 / 50%);
+	}
+	
+	#connection_form {
+		width: 18em;
+	    height: 5.6em;
+	    padding: 1em;
+	    position: absolute;
+	    left: calc(50% - 9em);
+	    top: calc(2.5em + 1px);
+	    background: rgb(255 255 255 / 50%);
+	}
+	
+	#connection_form label {
+		width: 6.389em;
+	    display: inline-block;
+	}
+	
+	#connection_form input[type="password"], #connection_form input[type="text"] {
+		margin-left: 3em;
+	}
+	
+	#connection_form input[type=submit] {
+		position: absolute;
+		right: 1.3em;
+	}
+	
+	#connection_form label + input {
+		margin-bottom: 1em;
+	}
 }
 
 

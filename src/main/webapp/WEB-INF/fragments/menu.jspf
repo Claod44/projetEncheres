@@ -4,13 +4,17 @@
 <!DOCTYPE html>
 <section id="Menu">
 	<nav>
-		<ul>
+		<input id="menu-toggle" type="checkbox" />
+    	<label class='menu-button-container' for="menu-toggle">
+    		<div class='menu-button'></div>
+  		</label>
+		<ul class="menu">
   		<% if(null == session.getAttribute("utilisateur")){ %>
-  			<li><a href="<%=application.getContextPath()%>/Inscription">Inscription</a>
+  			<li class="menu-item"><a href="<%=application.getContextPath()%>/Inscription">Inscription</a>
   			<%@ include file="connection.jspf"%>
   		<% } else {  Utilisateur u = (Utilisateur)session.getAttribute("utilisateur"); %>
-  			<li><a href="<%=application.getContextPath()%>/AfficherProfile">Profile</a></p></li>
-  			<li><a href="<%=application.getContextPath()%>/Deconnection">Deconnexion</a></li>
+  			<li class="menu-item"><a href="<%=application.getContextPath()%>/AfficherProfile">Profile</a></li>
+  			<li class="menu-item"><a href="<%=application.getContextPath()%>/Deconnection">Deconnexion</a></li>
   		<% } %>
 		</ul>
 	</nav>
