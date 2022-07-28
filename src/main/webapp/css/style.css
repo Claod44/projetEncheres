@@ -58,6 +58,7 @@ html * {
 body {
 	margin: 0;
 	padding: 0;
+	position: relative;
 }
 
 #videobg {
@@ -91,6 +92,16 @@ header h2 {
     position: absolute;
     top: calc(50% - 0.75em);
     left: calc(50% - 3.1065em);
+}
+
+#Menu {
+	position: relative;
+	z-index: 1000;
+}
+
+#Menu nav {
+	height: 2.5em;
+	background: rgb(120 120 120 / 50%);
 }
 
 /** Imported **/
@@ -152,42 +163,58 @@ header h2 {
 
 /** End import **/
 
-#Menu {
-	position: relative;
+#Menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display : none;
+	padding-top: 2.5em;
+}
+	
+#Menu ul li {
+	background: white;
+}
+	
+#Menu ul li a, #Menu ul li a:visited, label#connection_switch_label {
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	display: block;
+	height: 1.5em;
+	padding: 0.5em;
+	font-weight: bold;
+}
+	
+#Menu ul li a:hover, label#connection_switch_label:hover  {
+	color: black;
+	background-color: rgb(255 255 255 / 50%);
 }
 
-	#Menu nav {
-		height: 2.5em;
-		background: rgb(120 120 120 / 50%);
-	}
-
-	#Menu ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display : none;
-		padding-top: 2.5em;
+#connection_form {
+	width: 18em;
+	height: 5.6em;
+	padding: 1em;
+	position: relative;
+	margin: auto;
 	}
 	
-	#Menu ul li {
-		background: white;
-	}
+#connection_form label {
+	width: 6.389em;
+	display: inline-block;
+}
 	
-	#Menu ul li a, #Menu ul li a:visited, label#connection_switch_label {
-		text-decoration: none;
-		text-align: center;
-		color: black;
-		display: block;
-		height: 1.5em;
-		padding: 0.5em;
-		font-weight: bold;
-	}
+#connection_form input[type="password"], #connection_form input[type="text"] {
+	margin-left: 3em;
+}
 	
-	#Menu ul li a:hover, label#connection_switch_label:hover  {
-		color: black;
-		background-color: rgb(255 255 255 / 50%);
-	}
-
+#connection_form input[type=submit] {
+	position: absolute;
+	right: 1.3em;
+}
+	
+#connection_form label + input {
+	margin-bottom: 1em;
+}
 
 input[type="checkbox"]#connection_switch, form#connection_form {
   display: none;
@@ -201,6 +228,85 @@ input[type=checkbox]:checked + form#connection_form {
 	display: block;
 }
 
+body section#Menu + * {
+    margin: auto;
+    margin-top: 2em;
+}
+
+body section#Menu + *:first-of-type{
+    margin-top: 8em;
+}
+
+body section#Menu ~ form, body section#Menu ~ section.monprofil {
+    background: rgb(120 120 120 / 50%);
+    width: 50%;
+    padding: 2em;
+    border-radius: 0.5em;
+    position: relative;
+}
+
+body section#Menu ~ form {
+    height: 16em;
+}
+
+body section#Menu ~ form div.groupForm, body section#Menu ~ section.monprofil div.groupForm  {
+	margin-bottom: 0.3em;
+}
+
+body section#Menu ~ form div.groupForm > label, body section#Menu ~ form div.groupForm > input  {
+	display: inline-block;
+	width: calc(50% - (2 * 2em));
+}
+
+body section#Menu ~ section.monprofil {
+	font-weight: bold;
+}
+
+ body section#Menu ~ section.monprofil div.groupForm p {
+ 	display: inline-block;
+ 	width: 50%;
+ }
+ 
+ body section#Menu ~ section.monprofil div.groupForm p:first-of-type {
+ 	width: calc(30% - (2 * 2em));
+ }
+
+body section#Menu ~ form div.groupForm > label, body section#Menu ~ section.monprofil div.groupForm p:first-of-type {
+	padding-right: 6.49em;
+}
+
+body section#Menu ~ form div.btnsForm > input[type="submit"], body section#Menu ~ form div.btnsForm > input[type="reset"] {
+	width: 4.944em;
+	position: absolute;
+	bottom: 1em;
+}
+
+body section#Menu ~ form div.btnsForm > input[type="submit"] {
+	right: 2.4em;
+}
+
+body section#Menu ~ form div.btnsForm > input[type="reset"] {
+	right: calc(4.944em + 1em + 2.4em);
+}
+
+body section#Menu ~ section.monprofil {
+	margin: auto;
+}
+ 
+ body section#Menu ~ section.monprofil div.btnsForm a {
+ 	display: block;
+ 	background: white;
+ 	text-decoration: none;
+ 	color: black;
+ 	width: 5em;
+ 	position: absolute;
+ 	right: 2.5em;
+ 	bottom: 1em;
+ 	text-align: center;
+ 	border-radius: 0.2em;
+ 	border: solid 1px grey;
+ }
+ 
 
 /***********************************************************************************************************************************************************/
 

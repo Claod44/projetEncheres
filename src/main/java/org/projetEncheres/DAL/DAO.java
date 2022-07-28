@@ -1,7 +1,6 @@
 package org.projetEncheres.DAL;
 
 import java.util.List;
-import org.projetEncheres.EXCEPTIONS.DALException;
 
 /**
  * @author Claod

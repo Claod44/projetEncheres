@@ -57,8 +57,8 @@
 			
 		</div>
 		<div class="btnsForm">
-			<button type="submit">S'inscrire</button>
-			<button type ="reset">Annuler</button>
+			<input type="submit" value="S'inscrire"/>
+			<input type ="reset" value="Annuler"/>
 		</div>
 	</form>
 </body>

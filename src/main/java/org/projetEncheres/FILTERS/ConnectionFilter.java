@@ -20,6 +20,11 @@ import org.projetEncheres.OUTILS.ServletsAndFiltersTools;
 public class ConnectionFilter extends HttpFilter {
        
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 3628935633270815083L;
+
+	/**
      * @see HttpFilter#HttpFilter()
      */
     public ConnectionFilter() {

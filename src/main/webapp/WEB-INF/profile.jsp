@@ -15,7 +15,6 @@ pageEncoding="UTF-8"%>
 <%@ include file="fragments/header.jspf"%>
 <%@ include file="fragments/menu.jspf"%>
 	<section class="monprofil">
-		<h1>Profil</h1>
 		<div class="profil-card">
 			<div>
 				<div class="groupForm">

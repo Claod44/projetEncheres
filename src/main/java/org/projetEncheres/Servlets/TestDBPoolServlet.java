@@ -1,7 +1,6 @@
 package org.projetEncheres.Servlets;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -52,7 +51,6 @@ public class TestDBPoolServlet extends HttpServlet {
 	 */
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		TestDBPool test = new TestDBPool();
 		Utilisateur u = new Utilisateur();
 		u.setNom("Harivel");
 		u.setPrenom("Maxime");
