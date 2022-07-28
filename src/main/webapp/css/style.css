@@ -233,6 +233,10 @@ body section#Menu + * {
     margin-top: 2em;
 }
 
+body section#Menu ~ form {
+	margin: auto;
+}
+
 body section#Menu + *:first-of-type{
     margin-top: 8em;
 }
@@ -246,7 +250,7 @@ body section#Menu ~ form, body section#Menu ~ section.monprofil {
 }
 
 body section#Menu ~ form {
-    height: 16em;
+    height: 19em;
 }
 
 body section#Menu ~ form div.groupForm, body section#Menu ~ section.monprofil div.groupForm  {
@@ -260,6 +264,8 @@ body section#Menu ~ form div.groupForm > label, body section#Menu ~ form div.gro
 
 body section#Menu ~ section.monprofil {
 	font-weight: bold;
+    width: calc(100% - 4em);
+    border-radius: 0;
 }
 
  body section#Menu ~ section.monprofil div.groupForm p {
@@ -285,7 +291,7 @@ body section#Menu ~ form div.btnsForm > input[type="submit"] {
 	right: 2.4em;
 }
 
-body section#Menu ~ form div.btnsForm > input[type="reset"] {
+body section#Menu ~ form div.btnsForm > input[type="reset"], body section#Menu ~ form div.btnsForm > input[formaction="/SupprimerProfile"] {
 	right: calc(4.944em + 1em + 2.4em);
 }
 
@@ -306,6 +312,16 @@ body section#Menu ~ section.monprofil {
  	border-radius: 0.2em;
  	border: solid 1px grey;
  }
+ 
+body section#Menu ~ form div.btnsForm > input[formaction="/ModifierProfile"] {
+	width: 7em;
+	right: 2.8em;
+} 
+
+body section#Menu ~ form div.btnsForm > input[formaction="/SupprimerProfile"] {
+	width: 12.944em;
+	right: calc(7em + 1em + 2.8em);
+}
  
 
 /***********************************************************************************************************************************************************/
@@ -421,6 +437,11 @@ body section#Menu ~ section.monprofil {
 	
 	#connection_form label + input {
 		margin-bottom: 1em;
+	}
+
+	body section#Menu ~ section.monprofil {
+		width: 70%;
+	    border-radius: 0.5em;
 	}
 }
 
