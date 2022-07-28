@@ -3,6 +3,11 @@ package org.projetEncheres.BO;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+*
+**@author Claod
+*{@summary Classe modélisant une enchère }
+*/
 public class Enchere implements Serializable {
 	/**
 	 * 

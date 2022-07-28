@@ -3,6 +3,12 @@ package org.projetEncheres.BO;
 import java.io.Serializable;
 import java.util.List;
 
+
+/**
+*
+**@author Claod
+*{@summary Classe modélisant un vendeur }
+*/
 public class Vendeur extends Utilisateur implements Serializable {
 	/**
 	 * 

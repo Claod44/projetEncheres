@@ -5,6 +5,12 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+
+/**
+*
+**@author Claod
+*{@summary Classe modélisant une vente }
+*/
 public class Vente implements Serializable {
 	
 	//TODO BETA : gere le temps d'une vente, intégre une liste d'acquiereur

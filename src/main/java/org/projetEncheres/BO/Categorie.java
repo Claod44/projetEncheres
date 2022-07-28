@@ -2,6 +2,11 @@ package org.projetEncheres.BO;
 
 import java.io.Serializable;
 
+/**
+*
+**@author Claod
+*{@summary Classe modélisant la catégorie }
+*/
 public class Categorie implements Serializable {
 	/**
 	 * 

@@ -2,6 +2,11 @@ package org.projetEncheres.BO;
 
 import java.io.Serializable;
 
+/**
+*
+**@author Claod
+*{@summary Classe modélisant un utilisateur }
+*/
 public class Utilisateur implements Serializable {
 	
 	//Servlets : Se connecter : création de session, verifier et modifier profile // voir le profile d'un autre utilisateur, Se déconnecter : session destruct
