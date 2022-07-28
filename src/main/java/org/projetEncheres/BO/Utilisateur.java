@@ -52,7 +52,7 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Getter du nom }
 	 * @return
 	 */
 	public String getNom() {
@@ -61,7 +61,7 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Setter du nom }
 	 * @param Nom
 	 */
 	public void setNom(String Nom) {
@@ -75,6 +75,11 @@ public class Utilisateur implements Serializable {
 	*/
 	private String prenom;
 
+	/**
+	 * @author Claod
+	 * {@summary Getter du prenom }
+	 * @return prenom
+	 */
 	public String getPrenom() {
 		return this.prenom;
 	}
@@ -86,13 +91,18 @@ public class Utilisateur implements Serializable {
 	*/
 	private Integer noUtilisateur;
 
+	/**
+	 * @author Claod
+	 * {@summary Getter du numero utilisateur }
+	 * @return noUtilisateur
+	 */
 	public Integer getNoUtilisateur() {
 		return this.noUtilisateur;
 	}
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Setter du numero utilisateur }
 	 * @param id
 	 */
 	public void setNoUtilisateur(Integer id) {
@@ -101,7 +111,7 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Setter du prenom }
 	 * @param prenom
 	 */
 	public void setPrenom(String prenom) {
@@ -117,7 +127,7 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Getter du statut de l'utilisateur comme adminstrateur }
 	 * @return
 	 */
 	public Boolean isAdministrateur() {
@@ -126,7 +136,7 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Setter du statut de l'utilisateur comme adminstrateur }
 	 * @param administrateur
 	 */
 	public void setIsAdministrateur(Boolean administrateur) {
@@ -142,8 +152,8 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
-	 * @return
+	 * {@summary Getter du pseudo }
+	 * @return pseudo
 	 */
 	public String getPseudo() {
 		return this.pseudo;
@@ -151,7 +161,7 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Setter du pseudo }
 	 * @param pseudo
 	 */
 	public void setPseudo(String pseudo) {
@@ -167,8 +177,8 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
-	 * @return
+	 * {@summary Getter du mail }
+	 * @return email
 	 */
 	public String getEmail() {
 		return this.email;
@@ -176,7 +186,7 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Setter de l'email }
 	 * @param email
 	 */
 	public void setEmail(String email) {
@@ -192,8 +202,8 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
-	 * @return
+	 * {@summary Getter du numero de téléphone }
+	 * @return téléphone
 	 */
 	public String getTelephone() {
 		return this.telephone;
@@ -201,7 +211,7 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Setter du téléphone }
 	 * @param telephone
 	 */
 	public void setTelephone(String telephone) {
@@ -217,8 +227,8 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
-	 * @return
+	 * {@summary Getter de la rue }
+	 * @return rue
 	 */
 	public String getRue() {
 		return this.rue;
@@ -226,7 +236,7 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Setter de la rue }
 	 * @param rue
 	 */
 	public void setRue(String rue) {
@@ -242,8 +252,8 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
-	 * @return
+	 * {@summary Getter du code postal }
+	 * @return codePostal
 	 */
 	public String getCodePostal() {
 		return this.codePostal;
@@ -251,7 +261,7 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Setter du code postal }
 	 * @param codePostal
 	 */
 	public void setCodePostal(String codePostal) {
@@ -267,8 +277,8 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
-	 * @return
+	 * {@summary Getter de la ville }
+	 * @return ville
 	 */
 	public String getVille() {
 		return this.ville;
@@ -276,7 +286,7 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Setter de la ville }
 	 * @param ville
 	 */
 	public void setVille(String ville) {
@@ -292,8 +302,8 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
-	 * @return
+	 * {@summary Getter du mot de passe }
+	 * @return motDePasse
 	 */
 	public String getMotDePasse() {
 		return this.motDePasse;
@@ -301,7 +311,7 @@ public class Utilisateur implements Serializable {
 
 	/**
 	 * @author Claod
-	 * 
+	 * {@summary Setter du mot de passe }
 	 * @param motDePasse
 	 */
 	public void setMotDePasse(String motDePasse) {
@@ -317,6 +327,20 @@ public class Utilisateur implements Serializable {
 		super();
 	}
 	
+	/**
+	 * 
+	 *@author Claod
+	 *{@summary Constructeur avec parametres }
+	 * @param nom
+	 * @param prenom
+	 * @param pseudo
+	 * @param email
+	 * @param motDePasse
+	 * @param telephone
+	 * @param rue
+	 * @param codePostal
+	 * @param ville
+	 */
 	public Utilisateur(String nom, String prenom,
 			String pseudo, String email, String motDePasse,
 			String telephone, String rue, String codePostal, String ville) {
@@ -334,6 +358,20 @@ public class Utilisateur implements Serializable {
 		this.motDePasse = motDePasse;
 	}
 
+	/**
+	 * @author Claod
+	 * {@summary Constructeur avec paramètres }
+	 * @param nom
+	 * @param prenom
+	 * @param pseudo
+	 * @param email
+	 * @param motDePasse
+	 * @param telephone
+	 * @param rue
+	 * @param codePostal
+	 * @param ville
+	 * @param administrateur
+	 */
 	public Utilisateur(String nom, String prenom,
 			String pseudo, String email, String motDePasse,
 			String telephone, String rue, String codePostal, String ville, Boolean administrateur) {
@@ -351,6 +389,20 @@ public class Utilisateur implements Serializable {
 		this.motDePasse = motDePasse;
 	}
 	
+	/**
+	 * @author Claod
+	 * {@summary Constructeur avec Paramètres}
+	 * @param noUtilisateur
+	 * @param nom
+	 * @param prenom
+	 * @param pseudo
+	 * @param email
+	 * @param motDePasse
+	 * @param telephone
+	 * @param rue
+	 * @param codePostal
+	 * @param ville
+	 */
 	public Utilisateur(Integer noUtilisateur,
 			String nom, String prenom,
 			String pseudo, String email, String motDePasse,
@@ -370,6 +422,22 @@ public class Utilisateur implements Serializable {
 		this.motDePasse = motDePasse;
 	}
 
+	/**
+	 * @author Claod
+	 * {@summary Constructeur avec paramètres}
+	 * @param noUtilisateur
+	 * @param nom
+	 * @param prenom
+	 * @param pseudo
+	 * @param email
+	 * @param motDePasse
+	 * @param telephone
+	 * @param rue
+	 * @param codePostal
+	 * @param ville
+	 * @param credit
+	 * @param administrateur
+	 */
 	public Utilisateur(Integer noUtilisateur,
 			String nom, String prenom,
 			String pseudo, String email, String motDePasse,
