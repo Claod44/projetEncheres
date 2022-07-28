@@ -3,6 +3,11 @@ package org.projetEncheres.DAL;
 import java.util.List;
 import org.projetEncheres.EXCEPTIONS.DALException;
 
+/**
+ * @author Claod
+ *{@summary Classe générique DAO}
+ * @param <T>
+ */
 public interface DAO<T> {
 
 	/**
@@ -10,19 +15,45 @@ public interface DAO<T> {
 	 *
 	 */
 		
-		//Sélectionner un business object par son id
+		/**
+		 * @author Claod
+		 * {@summary Selectionne une entité par son ID}
+		 * @param obj
+		 * @return
+		 * @throws Exception
+		 */
 		public T selectById(T obj) throws Exception;
 		
-		//Sélectionner tous les business objects 
+		/**
+		 * @author Claod
+		 * {@summary Selectionne toutes les entités }
+		 * @return List<T>
+		 * @throws Exception
+		 */
 		public List<T> selectAll() throws Exception;
 		
-		//Modifier les attributs d'un business object
+		/**
+		 * @author Claod
+		 * {@summary Met à jour une entité dans base de données}
+		 * @param data
+		 * @throws Exception
+		 */
 		public void update(T data) throws Exception;
 		
-		//Insérer un nouveau business object
+		/**
+		 * @author Claod
+		 * {@summary Permet d'ajouter une entité en base de données}
+		 * @param data
+		 * @throws Exception
+		 */
 		public void insert(T data) throws Exception;
 		
-		//Supprimer un business object
+		/**
+		 * @author Claod
+		 * {@summary Supprime une entité en base de données}
+		 * @param obj
+		 * @throws Exception
+		 */
 		public void delete(T obj) throws Exception;
 		
 	

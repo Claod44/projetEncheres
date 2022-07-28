@@ -9,19 +9,47 @@ import org.projetEncheres.BO.Utilisateur;
 import org.projetEncheres.DAL.GestionnaireDesConnections;
 import org.projetEncheres.DAL.UtilisateurDAO;
 
+/**
+ * 
+ * @author Claod
+ * {@summary Classe permettant d'implémenter concrétement JDBC (table liés aux entités Utilisateurs)}
+ *
+ */
 public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 	
+	/**
+	 * @author Claod
+	 * {@summary Requête pour insérer un utilisateur}
+	 */
 	private static final String INSERT_UTILISATEUR_STRING = "insert into utilisateurs(pseudo, nom, prenom, email, mot_de_passe, telephone, rue, code_postal, ville, credit, administrateur) values (?,?,?,?,?,?,?,?,?,?,?)";
 	
+	/**
+	 * @author Claod
+	 * {@summary Requête pour autentifier un utilisateur}
+	 */
 	private static final String AUTENTIFIER_STRING = "SELECT * FROM utilisateurs WHERE pseudo = ? AND mot_de_passe = ?";
 	
+	/**
+	 * @author Claod
+	 * {@summary Requête pour mettre à jour les données d'un utilisateur (mot d epasse compris)}
+	 */
 	private static final String UPDATE_UTILISATEUR_AVEC_MOT_DE_PASSE_STRING = "UPDATE utilisateurs SET pseudo = ?, email = ?, mot_de_passe = ?, telephone = ?, rue = ?, code_postal = ?, ville = ? WHERE no_utilisateur = ?";
 	
+	/**
+	 * @author Claod
+	 * {@summary Requête pour insérer un utilisateur (sans mise à jour du mot de passe)}
+	 */
 	private static final String UPDATE_UTILISATEUR_SANS_MOT_DE_PASSE_STRING = "UPDATE utilisateurs SET pseudo = ?, email = ?, telephone = ?, rue = ?, code_postal = ?, ville = ? WHERE no_utilisateur = ?";
 	
-	
+	/**
+	 * @author Claod
+	 * {@summary Requête pour obtenir les données d'un utilisateur en fonction de son ID}
+	 */
 	private static final String SELECT_UTILISATEUR_BY_ID_STRING = "SELECT * FROM utilisateurs WHERE no_utilisateur = ?";
 	
+	/**
+	 * @author Claod
+	 */
 	@Override
 	public Utilisateur selectById(Utilisateur utilisateur) throws Exception {
 		Connection cnx = null;
@@ -65,12 +93,18 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 		return u;
 	}
 
+	/**
+	 * @author Claod
+	 */
 	@Override
 	public List<Utilisateur> selectAll() throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * @author Claod
+	 */
 	@Override
 	public void update(Utilisateur data) throws Exception {
 		Connection cnx = null;
@@ -111,6 +145,9 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 		
 	}
 
+	/**
+	 * @author Claod
+	 */
 	@Override
 	public void insert(Utilisateur data) throws Exception {
 		Connection cnx = null;
@@ -153,12 +190,18 @@ public class UtilisateurDAOJdbcImpl implements UtilisateurDAO {
 		
 	}
 
+	/**
+	 * @author Claod
+	 */
 	@Override
 	public void delete(Utilisateur obj) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
 
+	/**
+	 * @author Claod
+	 */
 	@Override
 	public Utilisateur authentifier(String pseudo, String mot_de_passe) throws Exception {
 		// TODO Auto-generated method stub

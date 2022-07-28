@@ -2,8 +2,19 @@ package org.projetEncheres.DAL;
 
 import java.lang.reflect.InvocationTargetException;
 
+/**
+ * 
+ * @author Claod
+ * {@summary Classe permettant d'obtenir les DAO pour obtenir les connexions }
+ *
+ */
 public class DAOFactory {
 	
+	/**
+	 * @author Claod
+	 * {@summary Permet d'obtenir l'instance de la DAO utilisateur (instance permettant d'obtenir la connexion) }
+	 * @return utilisateurDAO
+	 */
 	public static UtilisateurDAO getUtilisateurDAO()  {
 		UtilisateurDAO utilisateurDAO=null;
 		try {

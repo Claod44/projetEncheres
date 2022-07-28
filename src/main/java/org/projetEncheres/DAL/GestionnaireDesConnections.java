@@ -6,9 +6,22 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+/**
+ * 
+ * @author Claod
+ * {@Classe configurant le pool de connexion}
+ */
 public class GestionnaireDesConnections {
+	/**
+	 * String de connexion définie dans le context.xml du serveur tomcat (dossier dans le bandeau de gauche d'eclipse, pamris les projets)
+	 */
 	private static final String NOM_JNDI_POOL = "java:comp/env/jdbc/encherePool";
 
+	/**
+	 * @author Claod
+	 * {@summary Permet d'obtenir une connexion dans le pool}
+	 * @return Connection
+	 */
 	public static Connection getConnexion()  {
 		
 		Connection cnx = null;

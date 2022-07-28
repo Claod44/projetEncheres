@@ -5,8 +5,19 @@ import java.sql.PreparedStatement;
 
 import org.projetEncheres.BO.Utilisateur;
 
+/**
+ * 
+ * @author Claod
+ * {@summary Classe pour "tester la connexion vers la base de donnée (insertion d'un utilisateur) }
+ */
 public class TestDBPool {
 
+	/**
+	 * @author Claod
+	 * {@summary Insert un utilisateur (test)}
+	 * @param user
+	 * @throws Exception
+	 */
 	public static void insert(Utilisateur user) throws Exception {
 		Connection cnx = null;
 		PreparedStatement rqt = null;
