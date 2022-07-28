@@ -15,6 +15,7 @@ import org.projetEncheres.OUTILS.ServletsAndFiltersTools;
 
 /**
  * Servlet Filter implementation class ConnectionFilter
+ * @author Claod
  */
 public class ConnectionFilter extends HttpFilter {
        
@@ -35,6 +36,8 @@ public class ConnectionFilter extends HttpFilter {
 
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+	 * @author Claod
+	 * {@summary Permet de filtrer les utilisateurs connectés selon les URI définis dans la web.xml lié à ce filtre }
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub

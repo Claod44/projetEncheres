@@ -12,6 +12,8 @@ import org.projetEncheres.DAL.TestDBPool;
 
 /**
  * Servlet implementation class TestDBPool
+ * @author Claod
+ * {@summary Servlet de test, insère un utilisateur en BDD sur l'url /TestBDOPool}
  */
 public class TestDBPoolServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -41,7 +43,12 @@ public class TestDBPoolServlet extends HttpServlet {
 	}
 	
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @author Claod
+	 * {@summary teste la bdd en insérant un utilisateur}
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
 	 */
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub

@@ -40,6 +40,13 @@ import java.io.IOException;
  *  Puis descendre en bas trouver path="/NomduProjet" remplacer par Path="/"
  *  
  */
+
+/**
+ * 
+ * @author Claod
+ * {@summary Servlet de la page d'accueil }
+ *
+ */
 public class AccueilServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -68,7 +75,8 @@ public class AccueilServlet extends HttpServlet {
 	}
 
 	/**
-	 * 
+	 * @author Claod
+	 * {@summary renvoie vers la jsp de l'accueil }
 	 * @param request
 	 * @param response
 	 * @throws ServletException

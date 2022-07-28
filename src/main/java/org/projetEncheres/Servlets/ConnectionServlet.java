@@ -11,6 +11,8 @@ import org.projetEncheres.DAL.DAOFactory;
 
 /**
  * Servlet implementation class ConnectionServlet
+ * @author Claod
+ * {@summary Servlet permettant de se connecter}
  */
 public class ConnectionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -40,6 +42,14 @@ public class ConnectionServlet extends HttpServlet {
 		doRequest(request, response);
 	}
 	
+	/**
+	 * @author Claod
+	 * {@summary Connecte un utilisateur si ses identifiants son correctes et ajoute l'utilisteur retourné par la DAO dans la session, ou retourne un message si les identifiants ne sont pas bons }
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//TODO ne mettre qu'un seul request dispatcher tout à la fin et l'url dans une variable
 		System.out.println("dans doRequest");

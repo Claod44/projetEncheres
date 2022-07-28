@@ -15,6 +15,7 @@ import org.projetEncheres.DAL.DAOFactory;
 
 /**
  * Servlet implementation class ModifierProfileUtilisateurServlet
+ * @author Claod
  */
 public class ModifierProfileUtilisateurServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -44,7 +45,12 @@ public class ModifierProfileUtilisateurServlet extends HttpServlet {
 	}
 
 	/**
-	 * @see HttpServlet#doRequest(HttpServletRequest request, HttpServletResponse response)
+	 * @author Claod
+	 * {@summary Envoie vers la page pour afficher les informations actuelles de l'utilisateur si aucun paramètre n'est dans la request, sinon récupère les paramètres de la request et les enregistres en base de données}
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
 	 */
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub

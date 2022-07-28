@@ -10,6 +10,7 @@ import java.io.IOException;
 
 /**
  * Servlet implementation class DeconnectionServlet
+ * @author Claod
  */
 public class DeconnectionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -40,6 +41,8 @@ public class DeconnectionServlet extends HttpServlet {
 	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @author Claod
+	 * {@summary Déconnecte l'utilisateur en détruisant la session qui le contient et reroute vers l'accueil }
 	 */
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -47,7 +50,7 @@ public class DeconnectionServlet extends HttpServlet {
 		if(session!=null) {
 			session.invalidate();
 			System.out.println("Deconnecté reroutage ?");
-			response.sendRedirect(request.getContextPath() + "/Accueil");
+			response.sendRedirect(request.getContextPath() + "/Accueil"); //sécurité malgré le filtre
 		}
 	}
 

@@ -1,5 +1,12 @@
 package org.projetEncheres.EXCEPTIONS;
 
+//TODO faire nos propres exceptions pour traiter des erreurs selon nos besoins
+/**
+ * 
+ * @author Claod
+ * {@summary Exception personnalisée liée à la DAL}
+ * 
+ */
 public class DALException extends Exception {
 	/**
 	 * 

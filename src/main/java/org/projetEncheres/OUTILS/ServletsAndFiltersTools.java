@@ -4,6 +4,11 @@ import java.util.Collections;
 
 import jakarta.servlet.http.HttpSession;
 
+/**
+ * 
+ * @author Claod
+ * {@summary Classe outil permettant de rassember des fonctions statiques utiles de façon communes dans les Fitres et les Servlets }
+ */
 public class ServletsAndFiltersTools {
 
     

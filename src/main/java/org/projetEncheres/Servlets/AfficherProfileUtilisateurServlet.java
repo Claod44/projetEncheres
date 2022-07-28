@@ -16,8 +16,11 @@ import org.projetEncheres.BO.Utilisateur;
  * Servlet implementation class AfficherProfileUtilisateurServlet
  */
 
-@WebServlet("/MonProfil")
-
+/**
+ * 
+ * @author Maelle
+ * {@summary Servlet pour afficher un Profile utilisateur}
+ */
 public class AfficherProfileUtilisateurServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -46,6 +49,13 @@ public class AfficherProfileUtilisateurServlet extends HttpServlet {
 	
 	}
 	
+	/**
+	 * @author maelle
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String uri = "/WEB-INF/profile.jsp";

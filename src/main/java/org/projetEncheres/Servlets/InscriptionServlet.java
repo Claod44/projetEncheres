@@ -11,6 +11,7 @@ import org.projetEncheres.DAL.DAOFactory;
 
 /**
  * Servlet implementation class InscriptionServlet
+ * @author Claod
  */
 public class InscriptionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -39,6 +40,14 @@ public class InscriptionServlet extends HttpServlet {
 		doRequest(request, response);
 	}
 	
+	/**
+	 * @author Claod
+	 * {@summary Envoie vers la page d'inscription, vérifie la disponibilité du mail, du pseudo}
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//TODO Vue doit vérifier email, numero de tel, code postal, Servlet doit recevoir :
 		// String nom, String prenom, String pseudo, String email, String motDePasse, String telephone, String rue, String codePostal, String ville
